@@ -605,6 +605,7 @@ img {
   pointer-events: none;
   z-index: 0;
   transform-origin: 0% 50%;
+  
 }
 
 .system-connector--tr {
@@ -722,7 +723,7 @@ img {
   gap: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  max-width: 200px;
+  width: 200px;
   transition: transform 0.2s;
 }
 
@@ -731,8 +732,8 @@ img {
 }
 
 .module-card img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
   flex-shrink: 0;
 }
