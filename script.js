@@ -69,15 +69,30 @@
     });
   });
 
-  // ===== Header: transparent over hero, solid after scroll =====
+  // ===== Header: transparent over hero, solid after scroll (ضبط الاسكرول في النافبار) =====
   var header = document.querySelector('.header');
   if (header) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 60) {
+    var scrollThreshold = 60;
+    var ticking = false;
+
+    function updateHeaderScrolled() {
+      if (window.scrollY > scrollThreshold) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
       }
-    });
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderScrolled);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // تشغيل مرة عند التحميل (لو الصفحة فُتحت عند موقع تمرير معيّن)
+    updateHeaderScrolled();
   }
 })();

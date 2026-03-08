@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا | Oramtec - حلول Odoo ERP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/Logo.png" alt="Oramtec" class="logo-img">
+      </a>
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="Our services.html">خدماتنا</a>
+        <a href="blog.html">المدونة</a>
+        <!-- <a href="contact.html" class="active">تواصل معنا</a> -->
+        <div class="nav-actions-mobile">
+          <a href="contact.html" class="btn btn-primary">تواصل معنا</a>
+          <a href="#" class="btn btn-login">تسجيل الدخول</a>
+          <a href="#" class="nav-lang-mobile" aria-label="اللغة">
+            <span>عربي</span>
+            <img src="https://flagcdn.com/w20/eg.png" alt="العربية" width="20" height="15">
+          </a>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary">تواصل معنا</a>
+        <a href="#" class="btn btn-login">تسجيل الدخول</a>
+        <div class="lang-select">
+          <span>عربي</span>
+          <img src="https://flagcdn.com/w20/eg.png" alt="العربية" width="20" height="15">
+          <span class="lang-arrow">▼</span>
+        </div>
+      </div>
+      <button class="menu-toggle" aria-label="القائمة" type="button">
+        <span class="icon-menu" aria-hidden="true">☰</span>
+        <span class="icon-close" aria-hidden="true">✕</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <div class="container">
+      <nav class="contact-breadcrumb" aria-label="مسار التنقل">
+        <a href="index.html">الرئيسية</a>
+        <span class="contact-breadcrumb-sep"> &gt; </span>
+        <span class="contact-breadcrumb-current">تواصل معنا</span>
+      </nav>
+      <h1 class="contact-title">تواصل معنا لبدء رحلة التحول الرقمي</h1>
+      <p class="contact-desc">أرام تك شريكك الاستراتيجي المعتمد لتنفيذ حلول Odoo. نحن هنا لمساعدتك في بناء نظام مؤسسي متكامل يقود نمو أعمالك.</p>
+    </div>
+  </section>
+
+  <!-- Two Cards: Contact Details + Form -->
+  <section class="contact-cards">
+    <div class="container contact-cards-inner">
+       <!-- Card 2: Form -->
+       <div class="contact-card contact-card-form">
+        <h3 class="contact-form-title">طلب استشارة فنية</h3>
+        <p class="contact-form-instruction">أدخل البيانات التالية وسيقوم أحد خبرائنا بالتواصل معك خلال 24 ساعة</p>
+        <form class="contact-form" action="#" method="post">
+          <div class="contact-form-row">
+            <label class="contact-label">
+              <span>الاسم الكامل</span>
+              <input type="text" name="name" required placeholder="الاسم الكامل">
+            </label>
+            <label class="contact-label">
+              <span>اسم الشركة</span>
+              <input type="text" name="company" placeholder="شركتك الموفرة">
+            </label>
+          </div>
+          <div class="contact-form-row">
+            <label class="contact-label">
+              <span>البريد الإلكتروني</span>
+              <input type="email" name="email" required placeholder="name@company.com">
+            </label>
+            <label class="contact-label">
+              <span>رقم الجوال</span>
+              <input type="tel" name="phone" placeholder="+20 12 34567891">
+            </label>
+          </div>
+          <label class="contact-label contact-label-full">
+            <span>قطاع العمل</span>
+            <select name="sector">
+              <option value="">اختر القطاع</option>
+              <option value="retail">التجزئة</option>
+              <option value="manufacturing">التصنيع</option>
+              <option value="services">الخدمات</option>
+              <option value="health">الرعاية الصحية</option>
+              <option value="education">التعليم</option>
+              <option value="other">أخرى</option>
+            </select>
+          </label>
+          <label class="contact-label contact-label-full">
+            <span>رسالتك أو استفساراتك</span>
+            <textarea name="message" rows="4" placeholder="كيف يمكننا مساعدتك في مشروع التحول الرقمي الخاص بك؟"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary contact-submit">
+            إرسال الطلب
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+        </form>
+      </div>
+      <!-- بطاقة الهاتف + بطاقة البريد + السوشيال (طبقاً للصورة) -->
+      <div class="contact-info-column">
+        <!-- بطاقة 1: اتصل بنا مباشرة -->
+        <div class="contact-card contact-card-phone">
+          <h3 class="contact-card-heading">
+            <span class="contact-card-icon-wrap contact-card-icon-phone"><i class="fa-solid fa-phone"></i></span> 
+            اتصل بنا مباشرة
+          </h3>
+          <p class=" contact-row-phone">
+            <span class="contact-row-label">الإدارة العامة</span>
+            <a href="tel:+201034077557" class="contact-row-value contact-phone-admin">+20 10 34077557</a>
+          </p>
+          <p class=" contact-row-whatsapp">
+            <span class="contact-row-label">واتساب الأعمال</span>
+            <a href="https://wa.me/201034077552" target="_blank" rel="noopener" class="contact-row-value contact-phone-whatsapp">+20 10 34077552</a>
+          </p>
+        </div>
+        <!-- بطاقة 2: البريد الإلكتروني -->
+        <div class="contact-card contact-card-email">
+          <h3 class="contact-card-heading">
+            <span class="contact-card-icon-wrap contact-card-icon-email"><i class="fa-regular fa-envelope"></i></span>
+            البريد الإلكتروني
+          </h3>
+          <p class="contact-row">
+            <span class="contact-row-label">قسم المبيعات</span>
+            <a href="mailto:sales@oramtec.com" class="contact-row-value contact-email-value">sales@oramtec.com</a>
+          </p>
+          <p class="contact-row">
+            <span class="contact-row-label">الدعم الفني</span>
+            <a href="mailto:support@oramtec.com" class="contact-row-value contact-email-value">support@oramtec.com</a>
+          </p>
+        </div>
+        <!-- أيقونات السوشيال: دوائر زرقاء غامقة مع أيقونات بيضاء -->
+        <div class="contact-social">
+          <a href="#" aria-label="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="تويتر" ><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="انستغرام"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+      </div>
+
+     
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-ot-watermark" aria-hidden="true">
+      <img src="images/footer/icon - fotoer.svg" alt="">
+    </div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/footer/logo - white.svg" alt="Oramtec" class="footer-logo">
+        <p class="footer-tagline">Scaling Your Business</p>
+        <p class="footer-desc">تصمم Odoo ERP ليخدم عملك بكفاءة واحترافية من التشغيل اليومي إلى الاستراتيجيات الكبرى</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>روابط هامة</h4>
+          <a href="index.html">الرئيسية</a>
+          <a href="about.html">لماذا أرامتيك</a>
+          <a href="Our services.html">خدماتنا</a>
+          <a href="#">رحلة التنفيذ</a>
+          <a href="contact.html">تواصل معنا</a>
+        </div>
+        <div class="footer-col">
+          <h4>اكتشف</h4>
+          <a href="#">تنفيذ أنظمة Odoo ERP</a>
+          <a href="#">تطوير النظام</a>
+          <a href="#">تكامل الأنظمة</a>
+          <a href="#">التدريب والدعم المستمر</a>
+          <a href="#">التحليلات المتقدمة والتقارير الذكية</a>
+        </div>
+        <div class="footer-col">
+          <h4>وسائل التواصل</h4>
+          <p><img src="images/footer/phone.svg" alt="" class="footer-icon"> +20 10 34077557</p>
+          <p><img src="images/footer/email.svg" alt="" class="footer-icon"> Info@oramtec.com</p>
+          <p><img src="images/footer/hours.svg" alt="" class="footer-icon"> ساعات العمل: الأحد - الخميس من 9 صباحًا حتى 7 مساءً</p>
+          <div class="social-icons">
+            <a href="#" aria-label="فيسبوك"><img src="images/footer/facebook.svg" alt=""></a>
+            <a href="#" aria-label="يوتيوب"><img src="images/footer/mingcute_youtube-fill.svg" alt=""></a>
+            <a href="#" aria-label="تويتر"><img src="images/footer/simple-icons_x.svg" alt=""></a>
+            <a href="#" aria-label="انستغرام"><img src="images/footer/ri_instagram-fill.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>All rights reserved to Oramtec © 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,13 @@ body {
   line-height: 1.6;
   direction: rtl;
   overflow-x: hidden;
+}
+
+/* صور متجاوبة على جميع الشاشات */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 .hero-main-img,
@@ -61,6 +69,7 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .header.scrolled {
@@ -256,7 +265,7 @@ body {
 
 .hero-vector-on-text {
   position: absolute;
-  bottom: -5px;
+  bottom:-8px;
   right: 0;
   left: 0;
   width: 100%;
@@ -273,7 +282,7 @@ body {
 .hero-title {
   font-size: 2.25rem;
   font-weight: 800;
-  color: var(--text-dark);
+  color: #A94D90;
   line-height: 1.35;
   margin-bottom: 12px;
 }
@@ -285,7 +294,7 @@ body {
 
 .hero-underlines {
   position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   right: 45%;
   left: 0;
   width: 50%;
@@ -306,12 +315,41 @@ body {
   gap: 12px;
   align-items: flex-start;
 }
+.hero-buttons .btn-outline {
+  background: none;
+  color: #A94D90;
+  border: 1px solid #A94D90;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 200px;
+}
+.hero-buttons .btn-outline:hover {
+  background: #A94D90;
+  color: var(--white);
+}
+.hero-buttons .btn-primary {
+  background: #A94D90;
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 250px;
+}
+.hero-buttons .btn-primary:hover {
+  background: none;
+  color: #A94D90;
+  border: 1px solid #A94D90;
+}
 
 .hero-arrow {
   margin-top: 24px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 140px;
+  width: 200px;
   height: auto;
   display: block;
 }
@@ -986,9 +1024,11 @@ body {
 }
 
 /* ===== Journey Section ===== */
+
+
 .journey-section {
   padding: 70px 0;
-  background: #e8e4ec;
+  background: #F2F3F9;
 }
 
 .journey-title {
@@ -1054,7 +1094,6 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  vertical-align: middle;
   transform: scaleX(-1);
 }
 
@@ -1141,8 +1180,8 @@ body {
 }
 
 .journey-bar-text img {
-  width: 28px;
-  height: 28px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   filter: brightness(0) invert(1);
   flex-shrink: 0;
@@ -1150,10 +1189,23 @@ body {
 
 /* الخطوات الفردية: النص على يسار المسار (في RTL) */
 .journey-bar-1 {
-  top: 8%;
+  top: 6%;
   right: 52%;
   left: 2%;
   justify-content: flex-start;
+  font-size: 20px;
+  
+}
+.journey-bar-1 span {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+}
+.journey-bar-1 img {
+  width: 70px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .journey-bar-3 {
@@ -1163,6 +1215,18 @@ body {
   justify-content: flex-start;
 }
 
+.journey-bar-3 span {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+}
+.journey-bar-3 img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
 .journey-bar-5 {
   top: 72%;
   right: 52%;
@@ -1170,12 +1234,35 @@ body {
   justify-content: flex-start;
 }
 
+.journey-bar-5 span {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+}
+.journey-bar-5 img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
 /* الخطوات الزوجية: النص على يمين المسار */
 .journey-bar-2 {
-  top: 24%;
+  top: 22%;
   left: 52%;
   right: 2%;
   justify-content: flex-end;
+  font-size: 20px;
+}
+.journey-bar-2 span {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+}
+.journey-bar-2 img {
+  width: 70px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .journey-bar-4 {
@@ -1185,12 +1272,35 @@ body {
   justify-content: flex-end;
 }
 
+.journey-bar-4 span {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+}
+.journey-bar-4 img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
 .journey-bar-6 {
   top: 88%;
   left: 52%;
   right: 2%;
   justify-content: flex-end;
 }
+.journey-bar-6 span {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+}
+.journey-bar-6 img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
 
 .journey-note {
   text-align: center;
@@ -1216,6 +1326,31 @@ body {
 }
 
 @media (max-width: 768px) {
+  .journey-section {
+    padding: 48px 0;
+  }
+
+  .journey-title {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  .journey-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  .journey-steps-wrap {
+    padding: 16px 0;
+    margin-bottom: 20px;
+  }
+
   .journey-objects-container {
     max-width: 95%;
   }
@@ -1223,18 +1358,32 @@ body {
   .journey-bar-text {
     max-width: 38%;
     font-size: 0.8rem;
+    line-height: 1.35;
+    gap: 6px;
   }
 
   .journey-bar-text img {
     width: 22px;
     height: 22px;
   }
+
+  .journey-note {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    padding: 0 12px;
+    text-align: center;
+  }
+
+  .journey-wave-arrows img {
+    width: 42px;
+  }
 }
 
 /* ===== Sectors Section ===== */
 .sectors-section {
   padding: 70px 0;
-  background: #f8f8fa;
+  background: #F2F3F9;
 }
 
 .sectors-title {
@@ -1594,11 +1743,9 @@ body {
 .odoo-partner-section {
   padding: 70px 0;
   background:
-    url("images/Official partner/Ellipse 192.png") no-repeat center top / 1940px 600px,
+    url("../images/Official partner/Ellipse 192.svg") no-repeat center top / 1940px 600px,
     #e8e6f2;
   position: relative;
-  ;
-  
 }
 
 .odoo-title {
@@ -2322,9 +2469,37 @@ body {
 
 /* ===== Footer ===== */
 .footer {
-  background: linear-gradient(90deg, #2a3f7a 0%, #4a5a9a 50%, #6a7ab8 100%);
+  position: relative;
+  background: linear-gradient(90deg, #5370EA 0%, #A94D90 100%);
   color: var(--white);
   padding: 60px 0 0;
+  overflow: hidden;
+}
+
+/* علامة مائية OT في الفوتر كما في التصميم */
+.footer-ot-watermark {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: min(320px, 40vw);
+  height: auto;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-ot-watermark img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.footer .container,
+.footer-inner,
+.footer-copy {
+  position: relative;
+  z-index: 1;
 }
 
 .footer-inner {
@@ -2382,8 +2557,9 @@ body {
   width: 18px;
   height: 18px;
   vertical-align: middle;
-  margin-left: 8px;
-  opacity: 0.9;
+  margin-inline-end: 8px;
+  opacity: 0.95;
+  object-fit: contain;
 }
 
 .social-icons {
@@ -2395,7 +2571,7 @@ body {
 .social-icons a {
   width: 40px;
   height: 40px;
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  /* border: 2px solid rgba(255, 255, 255, 0.6); */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2409,23 +2585,61 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.social-icons a img {
+  width: 70%;
+  height: 90%;
+  object-fit: contain;
+}
+
 .footer-copy {
   text-align: center;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-copy::before {
+  content: '';
+  display: block;
+  width: 1200px;
+  margin: 0 auto 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-copy p {
   font-size: 0.85rem;
   opacity: 0.85;
+  margin: 0;
 }
-
 /* ===== Responsive ===== */
+/* نقاط التوقف: 1440 | 1400 | 1200 | 1024 (تابلت) | 768 | 600 | 480 | 360 (هواتف) */
 
 /* شاشات كبيرة 1440px */
 @media (max-width: 1440px) {
   .container {
     padding: 0 28px;
+  }
+
+  /* About Page - 1440px */
+  .about-hero-inner {
+    gap: 40px;
+  }
+
+  .about-hero-heading {
+    font-size: 32px;
+  }
+
+  .strategic-inner {
+    gap: 40px;
+  }
+
+  .values-grid {
+    gap: 20px;
+  }
+
+  .about-numbers-grid {
+    gap: 20px;
   }
 }
 
@@ -2441,12 +2655,47 @@ body {
     width: 100%;
     max-width: 520px;
   }
+
+  /* About Page - 1400px */
+  .about-hero {
+    padding: 120px 0 70px;
+  }
+
+  .about-hero-heading {
+    font-size: 30px;
+  }
+
+  .about-hero-desc {
+    font-size: 16px;
+  }
+
+  .strategic-title {
+    font-size: 1.75rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+
+  .value-item h4 {
+    font-size: 0.95rem;
+  }
+
+  .about-numbers-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
 }
 
 /* شاشات متوسطة 1200px */
 @media (max-width: 1200px) {
   .container {
     padding: 0 22px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
   }
   .sectors-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -2463,6 +2712,46 @@ body {
   }
   .flutter-inner {
     gap: 40px;
+  }
+
+  /* About Page - 1200px */
+  .about-hero {
+    padding: 110px 0 60px;
+  }
+
+  .about-hero-inner {
+    gap: 36px;
+  }
+
+  .about-hero-heading {
+    font-size: 28px;
+  }
+
+  .strategic-inner {
+    gap: 36px;
+  }
+
+  .vision-mission-grid {
+    max-width: 100%;
+    gap: 24px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .features-partner-grid {
+    gap: 28px;
+  }
+
+  .about-numbers-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .about-cta-card {
+    max-width: 700px;
   }
 }
 
@@ -2549,47 +2838,50 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* نظام — شبكة عمودين على الهاتف */
   .system-diagram-inner {
-    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 12px;
+    min-height: auto;
+    max-width: 100%;
   }
 
   .system-connector {
-    width: 35%;
+    display: none;
   }
 
-  .system-module--tr {
-    top: 8%;
-    left: 76%;
+  .system-center-wrap {
+    grid-column: 1 / -1;
+    order: -1;
+    position: static;
+    transform: none;
+    margin-bottom: 4px;
+    text-align: center;
   }
 
-  .system-module--r {
-    top: 50%;
-    left: 92%;
-  }
-
-  .system-module--br {
-    top: 92%;
-    left: 76%;
-  }
-
-  .system-module--bl {
-    top: 92%;
-    left: 24%;
-  }
-
-  .system-module--l {
-    top: 50%;
-    left: 8%;
-  }
-
+  .system-module--tr,
+  .system-module--r,
+  .system-module--br,
+  .system-module--bl,
+  .system-module--l,
   .system-module--tl {
-    top: 8%;
-    left: 24%;
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
   }
 
   .module-card {
-    max-width: 140px;
+    max-width: none;
+    width: 100%;
     padding: 14px 12px;
+    justify-content: flex-start;
+  }
+
+  .module-card img {
+    width: 36px;
+    height: 36px;
   }
 
   .module-card-desc {
@@ -2645,6 +2937,101 @@ body {
   .flutter-visual-img {
     margin: 0 auto;
   }
+
+  /* About Page - 1024px */
+  .about-hero,
+  .strategic-section,
+  .vision-mission-section,
+  .values-section,
+  .features-partner-section,
+  .about-numbers-section,
+  .about-cta-section {
+    padding: 56px 0;
+  }
+
+  .about-hero {
+    padding-top: 100px;
+  }
+
+  .about-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .about-hero-image {
+    order: 0;
+  }
+
+  .about-hero-content {
+    order: 1;
+  }
+
+  .about-hero-heading {
+    font-size: 1.65rem;
+    margin: 0 auto 16px;
+  }
+
+  .about-hero-desc {
+    max-width: 550px;
+    margin: 0 auto 24px;
+  }
+
+  .about-hero-buttons {
+    justify-content: center;
+  }
+
+  .about-image-frame {
+    max-width: 420px;
+    transform: rotate(0deg);
+  }
+
+  .about-image-frame::before {
+    display: none;
+  }
+
+  .strategic-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .strategic-image {
+    order: 0;
+  }
+
+  .strategic-content {
+    order: 1;
+  }
+
+  .strategic-badge {
+    text-align: center;
+  }
+
+  .strategic-points {
+    display: inline-block;
+    text-align: right;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .features-partner-grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 24px;
+  }
+
+  .about-numbers-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .about-cta-card {
+    max-width: 600px;
+    padding: 50px 40px;
+  }
 }
 
 /* تابلت وشاشات صغيرة 768px */
@@ -2668,8 +3055,146 @@ body {
   .numbers-section,
   .partners-section,
   .faq-section,
-  .blog-section {
+  .blog-section,
+  .about-hero,
+  .strategic-section,
+  .vision-mission-section,
+  .values-section,
+  .features-partner-section,
+  .about-numbers-section,
+  .about-cta-section {
     padding: 48px 0;
+  }
+
+  /* About Page - 768px */
+  .about-hero {
+    padding-top: 90px;
+  }
+
+  .about-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .about-hero-image {
+    order: 0;
+  }
+
+  .about-hero-content {
+    order: 1;
+  }
+
+  .about-hero-title {
+    font-size: 1.85rem;
+    margin-bottom: 28px;
+  }
+
+  .about-hero-heading {
+    font-size: 1.5rem;
+    margin: 0 auto 16px;
+  }
+
+  .about-hero-desc {
+    font-size: 15px;
+    margin: 0 auto 24px;
+    max-width: 500px;
+  }
+
+  .about-hero-buttons {
+    justify-content: center;
+  }
+
+  .about-image-frame {
+    max-width: 380px;
+    transform: rotate(0deg);
+  }
+
+  .about-image-frame::before {
+    display: none;
+  }
+
+  .strategic-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .strategic-image {
+    order: 0;
+  }
+
+  .strategic-content {
+    order: 1;
+  }
+
+  .strategic-badge {
+    text-align: center;
+  }
+
+  .strategic-title {
+    font-size: 1.5rem;
+  }
+
+  .strategic-points {
+    display: inline-block;
+    text-align: right;
+  }
+
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .vision-card,
+  .mission-card {
+    padding: 28px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .value-item {
+    padding: 20px 16px;
+  }
+
+  .features-partner-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .odoo-partner-card {
+    order: 1;
+    padding: 32px 24px;
+  }
+
+  .features-cards-wrap {
+    order: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .about-numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .about-number-card {
+    padding: 24px 16px;
+  }
+
+  .about-number-value {
+    font-size: 1.85rem;
+  }
+
+  .about-cta-card {
+    padding: 40px 28px;
+  }
+
+  .about-cta-card h2 {
+    font-size: 1.45rem;
   }
 
   .footer {
@@ -2886,11 +3411,14 @@ body {
     text-align: center;
   }
 
-  .section-desc {
-    font-size: 0.95rem;
-    margin-bottom: 32px;
+  .section-desc,
+  .section-subtitle {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 28px;
     text-align: center;
     max-width: 100%;
+    padding: 0 8px;
   }
 
   /* قسم المشكلة */
@@ -2924,12 +3452,26 @@ body {
   }
 
   .problem-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .problem-card {
-    padding: 20px 16px;
+    padding: 20px 14px;
+    min-height: 0;
+  }
+
+  .problem-card img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .problem-card-title {
+    font-size: 0.9rem;
+  }
+
+  .problem-card-sub {
+    font-size: 0.8rem;
   }
 
   .problem-arrow {
@@ -2972,6 +3514,20 @@ body {
 
   .why-img {
     height: 220px;
+    min-height: 220px;
+  }
+
+  .why-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .why-card-wrap .why-card .why-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   /* قسم الخدمات */
@@ -3067,12 +3623,48 @@ body {
   }
 
   .numbers-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .number-card {
-    text-align: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px 14px;
+    align-items: start;
+    text-align: right;
+    padding: 20px 16px;
+  }
+
+  .number-card > img {
+    grid-row: 1 / -1;
+    grid-column: 1;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 0;
+  }
+
+  .number-card > .number-value,
+  .number-card > h4,
+  .number-card > p {
+    grid-column: 2;
+  }
+
+  .number-value {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+  }
+
+  .number-card h4 {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+  }
+
+  .number-card p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    text-align: right;
+    max-width: 100%;
   }
 
   .footer-inner {
@@ -3100,9 +3692,11 @@ body {
   }
 
   .partners-track {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
   }
 
   .partners-section .section-title {
@@ -3156,19 +3750,21 @@ body {
   }
 
   .partner-logo {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
+    padding: 16px;
   }
 
   .partner-logo img,
   .partner-logo .partner-logo-img {
-    width: 90px;
-    height: 90px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .partner-logo .partner-logo-img {
-    width: 72px;
-    height: 72px;
+    max-width: 72px;
+    max-height: 72px;
   }
 
   .technologies-section .tech-logos {
@@ -3191,28 +3787,12 @@ body {
   }
 }
 
-/* هواتف متوسطة 600px */
+/* هواتف متوسطة 600px — بداية تنظيم الواجهة للهواتف */
 @media (max-width: 600px) {
   .container {
     padding: 0 16px;
   }
 
-  .problem-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 1.4rem;
-  }
-}
-
-/* هواتف 480px وأصغر */
-@media (max-width: 480px) {
-  .container {
-    padding: 0 16px;
-  }
-
-  /* تقليل المسافات بين الأقسام على الهاتف */
   .hero,
   .problem-section,
   .system-section,
@@ -3228,15 +3808,256 @@ body {
   .partners-section,
   .faq-section,
   .blog-section {
-    padding: 36px 0;
+    padding: 40px 0;
+  }
+
+  .problem-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .problem-card {
+    padding: 18px 12px;
+  }
+
+  .problem-card img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .section-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .number-card {
+    padding: 16px 12px;
+  }
+
+  .number-card > img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .number-value {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* رحلة التنفيذ — 600px */
+  .journey-title {
+    font-size: 1.3rem;
+    padding: 0 6px;
+  }
+
+  .journey-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+    padding: 0 6px;
+  }
+
+  .journey-steps-wrap {
+    padding: 12px 0;
+    margin-bottom: 18px;
+  }
+
+  .journey-note {
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  /* لماذا Oramtec — صور منظمة 600px */
+  .why-img {
+    height: 200px;
+    min-height: 200px;
+  }
+
+  .why-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .partners-track {
+    gap: 18px;
+  }
+
+  .partner-logo {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+/* هواتف 480px — تنظيم كامل للشاشات الصغيرة */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* مسافات موحّدة بين الأقسام */
+  .hero,
+  .problem-section,
+  .system-section,
+  .why-section,
+  .services-section,
+  .journey-section,
+  .sectors-section,
+  .technologies-section,
+  .security-section,
+  .odoo-partner-section,
+  .flutter-section,
+  .numbers-section,
+  .partners-section,
+  .faq-section,
+  .blog-section,
+  .about-hero,
+  .strategic-section,
+  .vision-mission-section,
+  .values-section,
+  .features-partner-section,
+  .about-numbers-section,
+  .about-cta-section {
+    padding: 32px 0;
+  }
+
+  /* ----- تنظيم النصوص في جميع الأقسام (هواتف) ----- */
+  .section-title {
+    font-size: 1.28rem;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    text-align: center;
+    padding: 0 8px;
+    color: var(--text-dark);
+  }
+
+  .section-desc,
+  .section-subtitle {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 auto 24px;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 4px;
+    color: var(--text-muted);
+  }
+
+  .problem-title {
+    font-size: 1.25rem;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .problem-desc {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 24px;
+    text-align: center;
+    
+  }
+
+  .problem-solution-text {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .system-title,
+  .why-title,
+  .security-title,
+  .odoo-title,
+  .flutter-title,
+  .sectors-title,
+  .journey-title,
+  .technologies-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    text-align: center;
+    padding: 0 8px;
+  }
+
+  .system-desc,
+  .why-desc,
+  .security-desc,
+  .odoo-desc,
+  .flutter-desc,
+  .sectors-desc,
+  .technologies-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    text-align: center;
+    padding: 0 4px;
+  }
+
+  .faq-section .section-title {
+    margin-bottom: 16px;
+  }
+
+  .accordion-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: right;
+    padding: 0 0 14px;
+  }
+
+  .footer-brand p,
+  .footer-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    text-align: right;
+  }
+
+  .footer-col h4 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    text-align: right;
+  }
+
+  .footer-col a,
+  .footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: right;
   }
 
   .footer {
-    padding: 32px 0 0;
+    padding: 28px 0 0;
+  }
+
+  .footer-inner {
+    gap: 28px;
+    padding-bottom: 32px;
   }
 
   .header-inner {
-    padding: 10px 12px;
+    padding: 12px 14px;
+    gap: 16px;
   }
 
   .logo-img {
@@ -3245,6 +4066,318 @@ body {
 
   .hero {
     padding-top: 88px;
+    padding-bottom: 56px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 100%;
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .number-card {
+    padding: 14px 12px;
+  }
+
+  .number-card > img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .number-value {
+    font-size: 1.4rem;
+  }
+
+  .number-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .number-card p {
+    font-size: 0.75rem;
+  }
+
+  .problem-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .problem-card {
+    padding: 18px 12px;
+  }
+
+  .problem-card img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .problem-card-title {
+    font-size: 0.9rem;
+  }
+
+  .problem-card-sub {
+    font-size: 0.75rem;
+  }
+
+  .accordion-trigger {
+    min-height: 48px;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+
+  /* Our Services - عمود واحد على الهواتف */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    padding: 20px 16px;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+  }
+
+  /* About Page 480px */
+  .about-hero {
+    padding-top: 80px;
+  }
+
+  .about-hero-inner {
+    gap: 24px;
+  }
+
+  .about-hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .about-hero-heading {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .about-hero-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .about-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .about-hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+  }
+
+  .about-image-frame {
+    max-width: 320px;
+    border-radius: 16px;
+  }
+
+  .about-image-frame img {
+    border-radius: 16px;
+  }
+
+  .strategic-badge {
+    font-size: 14px;
+  }
+
+  .strategic-title {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .strategic-desc {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .strategic-points li {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .strategic-points li img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .vision-card,
+  .mission-card {
+    padding: 24px 18px;
+  }
+
+  .vision-card h3,
+  .mission-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .vision-card p,
+  .mission-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .vision-card-icon img,
+  .mission-card-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .values-title {
+    font-size: 1.35rem;
+    margin-bottom: 32px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .value-item {
+    padding: 16px 12px;
+  }
+
+  .value-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .value-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .value-item p {
+    font-size: 12px;
+  }
+
+  .features-partner-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .odoo-partner-card {
+    order: 1;
+    padding: 28px 20px;
+  }
+
+  .odoo-partner-logo {
+    width: 80px;
+  }
+
+  .odoo-partner-badge {
+    font-size: 0.85rem;
+  }
+
+  .odoo-partner-card p {
+    font-size: 13px;
+  }
+
+  .features-cards-wrap {
+    order: 0;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .feature-card {
+    padding: 18px 14px;
+  }
+
+  .feature-card-header h4 {
+    font-size: 0.9rem;
+  }
+
+  .feature-card-header img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+
+  .about-numbers-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .about-number-card {
+    padding: 20px 14px;
+  }
+
+  .about-number-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .about-number-value {
+    font-size: 1.6rem;
+  }
+
+  .about-number-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .about-number-card p {
+    font-size: 12px;
+  }
+
+  .about-cta-card {
+    padding: 32px 20px;
+  }
+
+  .about-cta-card h2 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .about-cta-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .about-cta-card .btn {
+    width: 100%;
+    max-width: 220px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
   }
 
   .hero-inner {
@@ -3304,53 +4437,20 @@ body {
     font-size: 0.9rem;
   }
 
+  /* نظام — استمرار شبكة عمودين */
   .system-diagram-inner {
-    min-height: 380px;
-  }
-
-  .system-connector {
-    width: 32%;
-    height: 3px;
-  }
-
-  .system-module--tr {
-    top: 10%;
-    left: 74%;
-  }
-
-  .system-module--r {
-    top: 50%;
-    left: 90%;
-  }
-
-  .system-module--br {
-    top: 90%;
-    left: 74%;
-  }
-
-  .system-module--bl {
-    top: 90%;
-    left: 26%;
-  }
-
-  .system-module--l {
-    top: 50%;
-    left: 10%;
-  }
-
-  .system-module--tl {
-    top: 10%;
-    left: 26%;
+    gap: 12px 10px;
   }
 
   .system-center {
     width: 100px;
     height: 100px;
+    margin: 0 auto;
   }
 
   .system-center-icon {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 
   .system-center-top,
@@ -3359,8 +4459,12 @@ body {
   }
 
   .module-card {
-    max-width: 120px;
-    padding: 10px 8px;
+    padding: 12px 10px;
+  }
+
+  .module-card img {
+    width: 32px;
+    height: 32px;
   }
 
   .module-card-title {
@@ -3382,7 +4486,15 @@ body {
   }
 
   .why-img {
-    height: 180px;
+    height: 200px;
+    min-height: 200px;
+  }
+
+  .why-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   .why-card h3 {
@@ -3516,18 +4628,20 @@ body {
   }
 
   .partner-logo {
-    width: 72px;
-    height: 72px;
+    width: 88px;
+    height: 88px;
+    padding: 14px;
   }
 
   .partner-logo img {
-    width: 72px;
-    height: 72px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .partner-logo .partner-logo-img {
-    width: 56px;
-    height: 56px;
+    max-width: 64px;
+    max-height: 64px;
   }
 
   .number-card p {
@@ -3535,7 +4649,7 @@ body {
   }
 
   .number-value {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .accordion-trigger {
@@ -3560,7 +4674,28 @@ body {
     font-size: 0.8rem;
   }
 
-  /* رحلة التنفيذ على الهاتف الصغير */
+  /* رحلة التنفيذ — 480px */
+  .journey-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    padding: 0 6px;
+    text-align: center;
+  }
+
+  .journey-subtitle {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+    padding: 0 6px;
+    text-align: center;
+  }
+
+  .journey-steps-wrap {
+    padding: 12px 0;
+    margin-bottom: 16px;
+  }
+
   .journey-objects-container {
     max-width: 100%;
   }
@@ -3575,13 +4710,36 @@ body {
   }
 
   .journey-bar-text {
-    font-size: 0.7rem;
-    max-width: 34%;
+    font-size: 0.75rem;
+    line-height: 1.35;
+    max-width: 36%;
+    gap: 4px;
+  }
+
+  .journey-bar-1 span,
+  .journey-bar-2 span,
+  .journey-bar-3 span,
+  .journey-bar-4 span,
+  .journey-bar-5 span,
+  .journey-bar-6 span {
+    font-size: inherit;
   }
 
   .journey-bar-text img {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .journey-note {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  .journey-wave-arrows {
+    gap: 6px;
   }
 
   .journey-wave-arrows img {
@@ -3589,10 +4747,10 @@ body {
   }
 }
 
-/* هواتف صغيرة جداً 360px */
+/* هواتف صغيرة جداً 360px — تنظيم مضغوط مع الحفاظ على الوضوح */
 @media (max-width: 360px) {
   .container {
-    padding: 0 12px;
+    padding: 0 14px;
   }
 
   .hero,
@@ -3609,8 +4767,214 @@ body {
   .numbers-section,
   .partners-section,
   .faq-section,
-  .blog-section {
-    padding: 28px 0;
+  .blog-section,
+  .about-hero,
+  .strategic-section,
+  .vision-mission-section,
+  .values-section,
+  .features-partner-section,
+  .about-numbers-section,
+  .about-cta-section {
+    padding: 24px 0;
+  }
+
+  /* ----- تنظيم النصوص (هواتف صغيرة 360px) ----- */
+  .section-title {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    padding: 0 4px;
+  }
+
+  .section-desc,
+  .section-subtitle {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    padding: 0 2px;
+  }
+
+  .problem-title {
+    font-size: 1.1rem;
+  }
+
+  .problem-desc,
+  .problem-solution-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .problem-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .problem-card {
+    padding: 14px 10px;
+  }
+
+  .problem-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .problem-card-title {
+    font-size: 0.85rem;
+  }
+
+  .problem-card-sub {
+    font-size: 0.7rem;
+  }
+
+  /* أرقامنا + شركاء — 360px */
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .number-card {
+    padding: 12px 10px;
+  }
+
+  .number-card > img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .number-value {
+    font-size: 1.25rem;
+  }
+
+  .number-card h4 {
+    font-size: 0.85rem;
+  }
+
+  .number-card p {
+    font-size: 0.7rem;
+  }
+
+  .partner-logo {
+    width: 80px;
+    height: 80px;
+    padding: 12px;
+  }
+
+  .partner-logo .partner-logo-img {
+    max-width: 56px;
+    max-height: 56px;
+  }
+
+  /* لماذا Oramtec — صور واضحة 360px */
+  .why-img {
+    height: 180px;
+    min-height: 180px;
+  }
+
+  .why-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .why-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .why-card p {
+    font-size: 0.8rem;
+    padding: 0 10px 14px;
+  }
+
+  .system-diagram-inner {
+    gap: 10px 8px;
+  }
+
+  .module-card {
+    padding: 10px 8px;
+  }
+
+  .module-card img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .system-title,
+  .why-title,
+  .security-title,
+  .odoo-title,
+  .flutter-title,
+  .sectors-title,
+  .journey-title,
+  .technologies-title {
+    font-size: 1.1rem;
+  }
+
+  .system-desc,
+  .why-desc,
+  .security-desc,
+  .odoo-desc,
+  .flutter-desc,
+  .sectors-desc,
+  .technologies-desc {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .accordion-content p {
+    font-size: 14px;
+  }
+
+  /* رحلة التنفيذ — 360px */
+  .journey-section {
+    padding: 24px 0;
+  }
+
+  .journey-title {
+    font-size: 1.15rem;
+    padding: 0 4px;
+    margin-bottom: 6px;
+  }
+
+  .journey-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 0 4px;
+  }
+
+  .journey-steps-wrap {
+    padding: 10px 0;
+    margin-bottom: 14px;
+  }
+
+  .journey-bar-text {
+    font-size: 0.7rem;
+    line-height: 1.35;
+    max-width: 34%;
+  }
+
+  .journey-bar-text img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .journey-note {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    padding: 0 4px;
+  }
+
+  .journey-wave-arrows img {
+    width: 32px;
+  }
+
+  .header-inner {
+    padding: 10px 12px;
+  }
+
+  .logo-img {
+    height: 36px;
   }
 
   .hero-content h1 {
@@ -3633,4 +4997,127 @@ body {
   .blog-date-num {
     font-size: 0.9rem;
   }
+
+  /* About Page 360px */
+  .about-hero {
+    padding-top: 70px;
+  }
+
+  .about-hero-inner {
+    gap: 20px;
+  }
+
+  .about-hero-title {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
+  .about-hero-heading {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .about-hero-desc {
+    font-size: 13px;
+    padding: 0 5px;
+  }
+
+  .about-hero-buttons .btn {
+    max-width: 100%;
+    font-size: 0.85rem;
+    padding: 12px 16px;
+  }
+
+  .about-image-frame {
+    max-width: 280px;
+    border-radius: 12px;
+  }
+
+  .strategic-title {
+    font-size: 1.15rem;
+  }
+
+  .strategic-desc {
+    font-size: 13px;
+  }
+
+  .vision-card,
+  .mission-card {
+    padding: 20px 14px;
+  }
+
+  .vision-card h3,
+  .mission-card h3 {
+    font-size: 1rem;
+  }
+
+  .vision-card p,
+  .mission-card p {
+    font-size: 13px;
+  }
+
+  .values-title {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .value-item {
+    padding: 16px;
+  }
+
+  .value-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .value-item h4 {
+    font-size: 0.95rem;
+  }
+
+  .value-item p {
+    font-size: 13px;
+  }
+
+  .odoo-partner-card {
+    padding: 24px 16px;
+  }
+
+  .odoo-partner-logo {
+    width: 70px;
+  }
+
+  .feature-card {
+    padding: 16px 12px;
+  }
+
+  .about-number-card {
+    padding: 18px 12px;
+  }
+
+  .about-number-value {
+    font-size: 1.5rem;
+  }
+
+  .about-cta-card {
+    padding: 28px 16px;
+  }
+
+  .about-cta-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .about-cta-card p {
+    font-size: 13px;
+  }
+
+  .about-cta-card .btn {
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
 }
+

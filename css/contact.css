@@ -1,0 +1,552 @@
+/* ========================================
+   CONTACT PAGE - صفحة تواصل معنا (طبقاً للتصميم)
+======================================== */
+
+/* Hero */
+.contact-hero {
+  padding: 32px 0 40px;
+  background: linear-gradient(180deg, #ffffff 0%, #faf9fc 50%, #f5f2f9 100%);
+  text-align: center;
+  margin-top: 100px;
+}
+
+.contact-hero .container {
+  max-width: 1100px;
+}
+
+/* Breadcrumb: رمادي باهت كما في التصميم */
+.contact-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.contact-breadcrumb a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-family: var(--font);
+}
+
+.contact-breadcrumb a:hover {
+  color: #6A2285;
+}
+
+.contact-breadcrumb-sep {
+  color: #9ca3af;
+}
+
+.contact-breadcrumb-current {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* عنوان بنفسجي غامق كبير */
+.contact-title {
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  font-weight: 800;
+  color: #5a1a6b;
+  line-height: 1.35;
+  margin-bottom: 16px;
+  font-family: var(--font);
+}
+
+.contact-desc {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.75;
+  max-width: 720px;
+  font-family: var(--font);
+  margin: 0 auto;
+}
+
+/* منطقة البطاقتين: خلفية رمادية-زرقاء فاتحة */
+.contact-cards {
+  padding: 24px 0 80px;
+  background: #eef1f7;
+}
+
+.contact-cards-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  max-width: 1100px;
+}
+
+.contact-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  font-family: var(--font);
+}
+
+.contact-card-form {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* عمود البطاقتين + السوشيال (عمودي) */
+.contact-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* عناوين البطاقات: الأيقونة فوق والنص أسفلها في المنتصف */
+.contact-card-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  text-align: right;
+  gap: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px;
+}
+
+.contact-card-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.contact-card-icon-phone {
+  background: #eee;
+  color: #5370EA;
+}
+
+.contact-card-icon-email {
+  background: #d1d5db;
+  color: black;
+}
+
+/* صف: التسمية (رمادي) يمين والقيمة (أسود) يسار في RTL */
+.contact-row-phone {
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  gap: 12px;
+  margin-bottom: 14px;
+  font-family: var(--font);
+}
+.contact-row-whatsapp {
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  gap: 12px;
+  margin-bottom: 14px;
+  font-family: var(--font);
+}
+.contact-row {
+  display: flex;
+  align-items: right;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-family: var(--font);
+}
+
+.contact-row:last-child {
+  margin-bottom: 0;
+}
+
+.contact-row-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.contact-row-value {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  font-size: 1rem;
+}
+
+.contact-row-value:hover {
+  text-decoration: underline;
+}
+
+.contact-phone-admin {
+  color: #000;
+}
+
+.contact-phone-whatsapp {
+  color: #25D366;
+}
+
+.contact-email-value {
+  color: #000;
+}
+
+/* السوشيال: دوائر زرقاء غامقة وأيقونات بيضاء مع مسافة علوية */
+.contact-social {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.contact-social a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #5370EA;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 25px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.contact-social a:hover {
+  background: #2d4a7c;
+  transform: scale(1.05);
+}
+
+/* *Card 2: Form */
+
+.contact-form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 8px;
+}
+
+.contact-form-instruction {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.contact-label span {
+  font-family: var(--font);
+}
+
+.contact-label input,
+.contact-label select,
+.contact-label textarea {
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: var(--font);
+  transition: border-color 0.2s;
+}
+
+.contact-label input:focus,
+.contact-label select:focus,
+.contact-label textarea:focus {
+  outline: none;
+  border-color: #6A2285;
+}
+
+.contact-label input::placeholder,
+.contact-label textarea::placeholder {
+  color: #a0aec0;
+}
+
+.contact-label-full {
+  grid-column: 1 / -1;
+}
+
+.contact-label textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* زر إرسال: تدرج بنفسجي كما في التصميم */
+.contact-submit {
+  align-self: flex-start;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  border: none;
+  background: #A94D90;
+  width: 450px;
+  margin: 0 auto;
+  color: var(--white);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.contact-submit:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.contact-submit i {
+  font-size: 0.9rem;
+}
+
+/* ===== Contact Responsive: 1440 | 1400 | 1200 | 1024 | 768 | 600 | 480 ===== */
+@media (max-width: 1400px) {
+  .contact-hero .container,
+  .contact-cards-inner {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact-title {
+    font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  }
+  .contact-card {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-cards-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-column {
+    order: 1;
+  }
+
+  .contact-card-form {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 24px 0 32px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 24px 20px;
+  }
+
+  .contact-cards {
+    padding: 16px 0 60px;
+  }
+
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-social a {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding: 20px 0 28px;
+  }
+
+  .contact-title {
+    font-size: 1.45rem;
+  }
+
+  .contact-desc {
+    font-size: 0.95rem;
+  }
+
+  .contact-card {
+    padding: 20px 16px;
+  }
+
+  .contact-cards {
+    padding: 12px 0 48px;
+  }
+
+  .contact-form-title {
+    font-size: 1.1rem;
+  }
+
+  .contact-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* تنظيم صفحة تواصل معنا على الهواتف */
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 20px 0 24px;
+  }
+
+  .contact-breadcrumb {
+    margin-bottom: 16px;
+    font-size: 0.8rem;
+  }
+
+  .contact-title {
+    font-size: 1.35rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .contact-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: right;
+    margin-bottom: 0;
+  }
+
+  .contact-form-instruction {
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: right;
+    color: var(--text-muted);
+  }
+
+  .contact-label span {
+    font-size: 0.95rem;
+    text-align: right;
+  }
+
+  .contact-row-label {
+    text-align: right;
+  }
+
+  .contact-row-value {
+    text-align: left;
+  }
+
+  .contact-info-column {
+    gap: 20px;
+  }
+
+  .contact-card {
+    padding: 22px 18px;
+  }
+
+  .contact-card-heading {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .contact-card-icon-wrap {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .contact-row {
+    margin-bottom: 12px;
+  }
+
+  .contact-row-label {
+    font-size: 0.85rem;
+  }
+
+  .contact-row-value {
+    font-size: 0.95rem;
+  }
+
+  .contact-social {
+    margin-top: 20px;
+    gap: 14px;
+  }
+
+  .contact-social a {
+    width: 44px;
+    height: 44px;
+    font-size: 1.05rem;
+  }
+
+  .contact-form-title {
+    font-size: 1.1rem;
+  }
+
+  .contact-form-instruction {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-label input,
+  .contact-label select,
+  .contact-label textarea {
+    min-height: 48px;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .contact-label textarea {
+    min-height: 100px;
+  }
+
+  .contact-submit {
+    width: 100%;
+    min-height: 50px;
+    justify-content: center;
+    padding: 16px 24px;
+  }
+
+  .contact-cards {
+    padding: 20px 0 48px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-hero {
+    padding: 16px 0 20px;
+  }
+
+  .contact-title {
+    font-size: 1.2rem;
+  }
+
+  .contact-card {
+    padding: 18px 14px;
+  }
+
+  .contact-social a {
+    width: 40px;
+    height: 40px;
+  }
+}

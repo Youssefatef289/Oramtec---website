@@ -1,0 +1,76 @@
+/* services.css - صفحة خدماتنا (Our services.html) */
+
+.services-section {
+  margin-top: 80px;
+}
+
+.header.services-header {
+  background-color: #E8E5F0;
+}
+
+/* متجاوب مع الشاشات */
+@media (max-width: 1024px) {
+  .services-section {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    margin-top: 48px;
+  }
+}
+
+/* تنظيم صفحة خدماتنا على الهواتف */
+@media (max-width: 480px) {
+  .services-section {
+    margin-top: 32px;
+    padding: 28px 0;
+  }
+
+  .services-section .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .services-section .section-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .services-grid {
+    gap: 18px;
+  }
+
+  .service-card {
+    padding: 22px 18px;
+  }
+
+  .service-card h3 {
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .service-card .btn {
+    min-height: 46px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .services-section {
+    margin-top: 24px;
+    padding: 24px 0;
+  }
+
+  .service-card {
+    padding: 18px 14px;
+  }
+}
