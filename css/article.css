@@ -102,6 +102,7 @@
 .article-body {
   background: #f8f8fc;
   padding: 40px 0 60px;
+  overflow: visible;
 }
 
 /* الشريط الجانبي (محتويات المقال) يمين والمحتوى يسار - طبقاً للصورة */
@@ -111,16 +112,23 @@
   gap: 48px;
   align-items: start;
   padding-top: 0;
+  overflow: visible;
 }
 
-/* Sidebar - Table of Contents */
+/* Sidebar - محتويات المقال: ثابت عند التمرير (لا ينزل مع السكرول) */
 .article-sidebar {
   position: sticky;
-  top: 100px;
+  top: 88px;
+  align-self: start;
   background: white;
   border-radius: 25px;
   padding: 24px;
   color: black;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  z-index: 5;
+  -webkit-overflow-scrolling: touch;
 }
 
 .article-toc-header {
@@ -156,7 +164,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  
+  min-height: 0;
 }
 
 .article-toc-link {
@@ -185,6 +193,7 @@
 }
 
 /* Main Content */
+
 .article-main {
   min-width: 0;
 }
@@ -329,15 +338,50 @@
 .article-related-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 40px 36px;
   margin-bottom: 24px;
 }
 
+/* بطاقات المقالات ذات الصلة — توسيع المسافات ونص سطر واحد لكل بطاقة */
+.article-related .blog-card {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.article-related .blog-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 18px 8px;
+  color: #5370EA;
+  line-height: 1.45;
+  margin: 0;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article-related .blog-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 0 18px 10px;
+  margin: 0;
+  line-height: 1.5;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article-related .blog-link {
+  margin-top: auto;
+  padding: 0 18px 18px;
+  font-weight: 600;
+  color: #6a7ab8;
+}
+
 .article-related-card {
-  /* background: var(--white); */
   border-radius: 12px;
   overflow: hidden;
-  /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06); */
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
@@ -350,12 +394,14 @@
   position: relative;
   aspect-ratio: 16/10;
   overflow: hidden;
+  
 }
 
 .article-related-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 /* شارة دائرية في الزاوية العليا لليسار (طبقاً للصورة: دائرة بيضاء فيها الرقم والنص) */
@@ -491,6 +537,7 @@
 
   .article-related-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px 28px;
   }
 }
 
@@ -525,9 +572,8 @@
 
   .article-related-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
-
- 
 }
 
 @media (max-width: 600px) {
@@ -650,8 +696,18 @@
   }
 
   .article-related-grid {
-    gap: 18px;
+    gap: 24px;
     margin-bottom: 20px;
+  }
+
+  .article-related .blog-card h3 {
+    font-size: 0.95rem;
+    padding: 12px 14px 6px;
+  }
+
+  .article-related .blog-card p {
+    font-size: 0.85rem;
+    padding: 0 14px 8px;
   }
 
   .article-related-card-title {
