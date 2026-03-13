@@ -1087,6 +1087,7 @@
   }
 }
 
+
 @media (max-width: 480px) {
   .service-detail-hero,
   .transformation-section,
@@ -1180,6 +1181,9 @@
   .lifecycle-content {
     padding: 0 8px;
     gap: 24px;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .lifecycle-diagram {
@@ -1187,28 +1191,49 @@
     min-height: 260px;
   }
 
+  /* 480px: عرض الخطوات 2 بجانب بعض */
   .lifecycle-circle {
-    width: 220px;
-    height: 220px;
-    max-width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
   }
 
   .lifecycle-center {
-    width: 56px;
-    height: 56px;
+    display: none;
   }
 
-  .lifecycle-center img {
-    width: 22px;
-    height: 22px;
+  .lifecycle-step {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
-  .lifecycle-step-1 { top: -26px; }
-  .lifecycle-step-2 { right: -18px; }
-  .lifecycle-step-3 { right: -20px; }
-  .lifecycle-step-4 { bottom: -26px; }
-  .lifecycle-step-5 { left: -20px; }
-  .lifecycle-step-6 { left: -22px; }
+  .lifecycle-step-1,
+  .lifecycle-step-2,
+  .lifecycle-step-3,
+  .lifecycle-step-4,
+  .lifecycle-step-5,
+  .lifecycle-step-6 {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    transform: none;
+  }
 
   .lifecycle-step-icon,
   .lifecycle-step-1 .lifecycle-step-icon,
@@ -1217,8 +1242,10 @@
   .lifecycle-step-4 .lifecycle-step-icon,
   .lifecycle-step-5 .lifecycle-step-icon,
   .lifecycle-step-6 .lifecycle-step-icon {
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .lifecycle-step-icon img {
