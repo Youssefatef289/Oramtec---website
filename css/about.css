@@ -67,12 +67,12 @@
 }
 
 .about-hero-heading {
-  font-size: clamp(1.5rem, 4vw, 35px);
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 500;
   color: var(--text-dark);
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   line-height: 1.4;
-  max-width: 100%;
+  width: 300px;
 }
 
 .about-hero-heading .text-purple {
@@ -80,11 +80,11 @@
 }
 
 .about-hero-desc {
-  font-size: 17px;
+  font-size: 20px;
   color: var(--text-muted);
   line-height: 1.8;
   margin-bottom: 28px;
-  max-width: 100%;
+  width: 500px;
 }
 
 .about-hero-buttons {
@@ -114,8 +114,8 @@
 
 .about-hero-buttons .btn-outline {
   background: white;
-  color:#A94D90;
-  border: 1px solid #A94D90;
+  color:#5370EA;
+  border: 1px solid #5370EA;
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 1rem;

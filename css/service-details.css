@@ -675,34 +675,50 @@
 }
 
 @media (max-width: 1024px) {
+  .service-detail-why,
+  .service-detail-why h3,
+  .service-detail-points,
+  .service-detail-points li {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
   .service-detail-hero {
     padding: 100px 0 60px;
   }
 
   .service-detail-inner {
-    grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .service-detail-image {
-    order: 0;
+    order: 1;
   }
 
   .service-detail-content {
-    order: 1;
-    text-align: center;
-  }
-
-  .service-detail-desc {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .service-detail-why {
+    order: 0;
     text-align: right;
   }
 
+  .service-detail-desc {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: right;
+  }
+
+  .service-detail-why {
+    text-align: center;
+  }
+
   .service-detail-why h3 {
+    text-align: center;
+  }
+  .service-detail-points {
+    text-align: center;
+  }
+
+  .service-detail-points li {
     text-align: center;
   }
 
@@ -754,17 +770,68 @@
     max-width: 100%;
   }
 
+  /* 1024 + iPad: إخفاء الصورة الوسطى، وعرض الخطوات 2 بجانب بعض */
   .lifecycle-circle {
-    width: min(420px, 100%);
-    height: min(420px, 100%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    min-height: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
   }
 
-  .lifecycle-step-1 { top: -48px; }
-  .lifecycle-step-2 { right: -32px; }
-  .lifecycle-step-3 { right: -36px; }
-  .lifecycle-step-4 { bottom: -42px; }
-  .lifecycle-step-5 { left: -36px; }
-  .lifecycle-step-6 { left: -44px; }
+  .lifecycle-center {
+    display: none;
+  }
+
+  .lifecycle-step {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .lifecycle-step-1,
+  .lifecycle-step-2,
+  .lifecycle-step-3,
+  .lifecycle-step-4,
+  .lifecycle-step-5,
+  .lifecycle-step-6 {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    transform: none;
+  }
+
+  .lifecycle-step-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .lifecycle-step-1 .lifecycle-step-icon,
+  .lifecycle-step-3 .lifecycle-step-icon,
+  .lifecycle-step-5 .lifecycle-step-icon,
+  .lifecycle-step-2 .lifecycle-step-icon,
+  .lifecycle-step-4 .lifecycle-step-icon,
+  .lifecycle-step-6 .lifecycle-step-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .lifecycle-step span {
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -779,6 +846,21 @@
 
   .service-detail-hero {
     padding-top: 90px;
+  }
+
+  /* على الشاشات الأصغر من 768px نعود لتكديس الصورة فوق النص */
+  .service-detail-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .service-detail-image {
+    order: 0;
+  }
+
+  .service-detail-content {
+    order: 1;
+    text-align: center;
   }
 
   .service-detail-title {

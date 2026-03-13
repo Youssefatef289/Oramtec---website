@@ -88,6 +88,7 @@
 .contact-card-form {
   width: 100%;
   max-width: 600px;
+  margin: 0 auto;
 }
 
 /* عمود البطاقتين + السوشيال (عمودي) */
@@ -200,6 +201,7 @@
   gap: 16px;
   margin-top: 32px;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .contact-social a {
