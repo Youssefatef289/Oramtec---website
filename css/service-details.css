@@ -318,13 +318,13 @@
 
 .lifecycle-content-wrap {
   margin: 0 auto 48px;
-  text-align: center;
+  text-align: right;
   max-width: 800px;
 }
 
 .lifecycle-badge {
   display: inline-block;
-  text-align: center;
+  text-align: right;
   font-size: 0.9rem;
   font-weight: 600;
   color: #5370EA;
@@ -336,17 +336,18 @@
 }
 
 .lifecycle-title {
-  text-align: center;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: 800;
+  text-align: right;
+  font-size: 36px;
+  font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   margin-left: 0;
 }
 
 .lifecycle-desc {
-  text-align: center;
-  font-size: 1rem;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 400;
   color: var(--text-muted);
   max-width: 700px;
   margin: 0 auto;

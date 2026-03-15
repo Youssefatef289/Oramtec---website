@@ -66,6 +66,7 @@ body {
 .system-title-underline-wrap {
   z-index: 0;
 }
+
 .hero-vector-on-text,
 .hero-underlines,
 .problem-vector-on-text,
@@ -172,6 +173,9 @@ img {
   color: var(--text-dark);
   font-weight: 500;
   transition: color 0.2s;
+  font-size: 20px;
+  width: 70px;
+  height: 35px;
 }
 
 .header:not(.scrolled) .nav a {
@@ -231,8 +235,8 @@ img {
 }
 
 
-  .header-actions .btn-login {
-  background:none;
+.header-actions .btn-login {
+  background: none;
   color: #5370EA;
   border: 1px solid #5370EA;
   border-radius: 10px;
@@ -298,7 +302,7 @@ img {
 /* ===== Hero ===== */
 .hero {
   background: linear-gradient(135deg, rgba(248, 248, 252, 0.98) 0%,
-   var(--white) 30%, rgba(231, 133, 251, 0.3) 100%);
+      var(--white) 30%, rgba(231, 133, 251, 0.3) 100%);
   padding: 120px 0 80px;
 }
 
@@ -328,16 +332,16 @@ img {
   position: relative;
   display: inline-block;
   z-index: 0;
-  
+
 }
 
 .hero-vector-on-text {
   position: absolute;
-  bottom: -35px;
+  bottom: 15px;
   right: 0;
   left: 0;
   width: 155px;
-  height: 120px;
+  /* height: 150px; */
   display: block;
   pointer-events: none;
   z-index: -1;
@@ -348,11 +352,11 @@ img {
 }
 
 .hero-title {
-  font-size: 2.25rem;
+  font-size: 36px;
   font-weight: 800;
   color: #A94D90;
   line-height: 1.35;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 .hero-title-underline-wrap {
@@ -372,9 +376,12 @@ img {
 
 .hero-desc {
   color: var(--text-muted);
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 20px;
+  line-height: 160%;
   margin-bottom: 50px;
+  letter-spacing: 0%;
+  font-weight: 400;
+  max-width: 552px;
 }
 
 .hero-buttons {
@@ -382,6 +389,7 @@ img {
   gap: 12px;
   align-items: flex-start;
 }
+
 .hero-buttons .btn-outline {
   background: none;
   color: #A94D90;
@@ -392,10 +400,12 @@ img {
   font-weight: 600;
   width: 200px;
 }
+
 .hero-buttons .btn-outline:hover {
   background: #A94D90;
   color: var(--white);
 }
+
 .hero-buttons .btn-primary {
   background: #A94D90;
   color: var(--white);
@@ -406,6 +416,7 @@ img {
   font-weight: 600;
   width: 250px;
 }
+
 .hero-buttons .btn-primary:hover {
   background: none;
   color: #A94D90;
@@ -466,17 +477,22 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: center;
+  padding: 0 auto;
+  
 }
 
 .problem-text-col {
   position: relative;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .problem-title {
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: var(--purple);
-  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #A94D90;
+  margin-bottom: 50px;
   line-height: 1.4;
 }
 
@@ -489,6 +505,7 @@ img {
   position: relative;
   display: inline-block;
   z-index: 0;
+  font-weight: bold;
 }
 
 .problem-vector-on-text {
@@ -507,14 +524,15 @@ img {
 .problem-title-underline-wrap {
   position: relative;
   display: inline-block;
+  font-weight: bold;
 }
 
 .problem-underlines {
   position: absolute;
   bottom: -25px;
-  right: 45%;
+  right: 15%;
   left: 0;
-  width: 50%;
+  width: 80%;
   height: auto;
   display: block;
 }
@@ -522,14 +540,16 @@ img {
 .problem-desc {
   color: var(--text-muted);
   font-size: 18px;
-  line-height: 1.75;
   margin-bottom: 40px;
+  line-height: 160%;
+  font-weight: 400;
+
 }
 
 .problem-solution-text {
   color: var(--text-muted);
   font-size: 18px;
-  line-height: 1.8;
+
 }
 
 .problem-solution-bold {
@@ -557,9 +577,9 @@ img {
 
 .problem-arrow {
   position: absolute;
-  bottom: 50%;
-  left: -100px;
-  max-width: 140px;
+  bottom: 40%;
+  left: -170px;
+  width: 140px;
   height: auto;
   transform: translateY(50%);
   pointer-events: none;
@@ -693,7 +713,7 @@ img {
   pointer-events: none;
   z-index: 0;
   transform-origin: 0% 50%;
-  
+
 }
 
 .system-connector--tr {
@@ -854,7 +874,7 @@ img {
   flex-wrap: wrap;
 }
 
-  .cta-buttons .btn-with-arrow {
+.cta-buttons .btn-with-arrow {
   background-color: #A94D90;
   width: 250px;
   border-radius: 10px;
@@ -870,7 +890,7 @@ img {
   margin-inline-start: 12px;
 }
 
- .cta-buttons .btn-with-arrow::after {
+.cta-buttons .btn-with-arrow::after {
   content: '';
   margin-right: 8px;
   font-size: 1rem;
@@ -882,7 +902,7 @@ img {
   border: 1px solid #A94D90;
   border-radius: 10px;
   width: 200px;
-  padding: 10px ;
+  padding: 10px;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -990,7 +1010,7 @@ img {
   display: flex;
   flex-direction: column;
   color: #A94D90;
-  
+
 
 }
 
@@ -1092,7 +1112,7 @@ img {
   text-align: center; */
   transition: transform 0.2s;
   height: 400px;
- 
+
 }
 
 .service-card:hover {
@@ -1122,7 +1142,7 @@ img {
   margin-top: 50px;
   /* width: 216px;
   height: 78px; */
-  
+
 }
 
 .service-card .btn {
@@ -1314,14 +1334,16 @@ img {
   top: 6%;
   right: 52%;
   left: 2%;
-  justify-content:start ;
+  justify-content: start;
   font-size: 20px;
 }
+
 .journey-bar-1 span {
   font-size: 25px;
   font-weight: 400;
   text-align: center;
 }
+
 .journey-bar-1 img {
   width: 70px;
   height: 50px;
@@ -1332,7 +1354,7 @@ img {
   top: 38%;
   right: 52%;
   left: 2%;
-  justify-content:start ;
+  justify-content: start;
 }
 
 .journey-bar-3 span {
@@ -1341,6 +1363,7 @@ img {
   text-align: center;
   align-items: center;
 }
+
 .journey-bar-3 img {
   width: 50px;
   height: 50px;
@@ -1359,11 +1382,13 @@ img {
   font-weight: 400;
   text-align: center;
 }
+
 .journey-bar-5 img {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
+
 /* الخطوات الزوجية: النص على يمين المسار */
 .journey-bar-2 {
   top: 22%;
@@ -1372,11 +1397,13 @@ img {
   justify-content: center;
   font-size: 20px;
 }
+
 .journey-bar-2 span {
   font-size: 20px;
   font-weight: 400;
   text-align: center;
 }
+
 .journey-bar-2 img {
   width: 70px;
   height: 50px;
@@ -1395,22 +1422,26 @@ img {
   font-weight: 400;
   text-align: center;
 }
+
 .journey-bar-4 img {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
+
 .journey-bar-6 {
   top: 88%;
   left: 52%;
   right: 2%;
   justify-content: center;
 }
+
 .journey-bar-6 span {
   font-size: 20px;
   font-weight: 400;
   text-align: center;
 }
+
 .journey-bar-6 img {
   width: 50px;
   height: 50px;
@@ -1511,6 +1542,7 @@ img {
   position: relative;
   display: inline-block;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .sectors-title-vector-wrap {
@@ -1599,6 +1631,7 @@ img {
   padding: 70px 0;
   background: var(--white);
   position: relative;
+  height: 300px;
 }
 
 .technologies-section::before {
@@ -1870,13 +1903,14 @@ img {
 .security-col-left .security-item:nth-child(1) {
   align-self: flex-end;
 }
+
 .security-col-left .security-item:nth-child(2) {
   align-self: center;
 }
 
 .security-col-left .security-item:nth-child(3) {
   align-self: flex-start;
-  
+
 }
 
 .security-col-right .security-item:nth-child(1) {
@@ -1890,6 +1924,7 @@ img {
 [dir="rtl"] .security-col-left .security-item:nth-child(1) {
   align-self: flex-start;
 }
+
 [dir="rtl"] .security-col-left .security-item:nth-child(2) {
   align-self: center;
 }
@@ -1901,6 +1936,7 @@ img {
 [dir="rtl"] .security-col-right .security-item:nth-child(1) {
   align-self: flex-end;
 }
+
 [dir="rtl"] .security-col-right .security-item:nth-child(2) {
   align-self: center;
 }
@@ -1923,6 +1959,7 @@ img {
 .odoo-title {
   position: relative;
   text-align: center;
+  color: #A94D90;
 }
 
 .odoo-title-vector-wrap,
@@ -1967,14 +2004,14 @@ img {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 420px;
+  max-width: 520px;
 }
 
 .odoo-benefit {
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  max-width: 650px;
+  max-width: 900px;
   width: 100%;
 }
 
@@ -2186,7 +2223,24 @@ img {
   background: rgba(140, 57, 161, 0.08);
 }
 
+/* تابلت متوسط 900px — هيرو ونافبار */
 @media (max-width: 900px) {
+  .hero {
+    padding: 98px 0 60px;
+  }
+
+  .hero-content .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .hero-desc {
+    font-size: 1.02rem;
+  }
+
+  .header-inner {
+    padding: 14px 20px;
+  }
+
   .flutter-inner {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -2221,9 +2275,11 @@ img {
   padding: 70px 0;
   background: #F7F6F8;
 }
+
 .numbers-section .section-title {
   color: #A94D90;
 }
+
 .numbers-title-vector-wrap,
 .numbers-title-underline-wrap {
   position: relative;
@@ -2240,7 +2296,7 @@ img {
   height: auto;
   object-fit: contain;
   pointer-events: none;
-  z-index:-1;
+  z-index: -1;
 }
 
 .numbers-title-underline {
@@ -2309,9 +2365,11 @@ img {
   padding: 70px 0;
   background: white;
 }
+
 .partners-section .section-title {
   color: #A94D90;
 }
+
 .partners-title-vector-wrap,
 .partners-title-underline-wrap {
   position: relative;
@@ -2380,6 +2438,7 @@ img {
   height: 100px;
   border-radius: 50px;
 }
+
 .carousel-dots {
   display: flex;
   justify-content: center;
@@ -2406,9 +2465,11 @@ img {
   padding: 70px 0;
   background: #F7F6F8;
 }
+
 .faq-section .section-title {
   color: #A94D90;
 }
+
 .faq-title-vector-wrap,
 .faq-title-underline-wrap {
   position: relative;
@@ -2508,9 +2569,8 @@ img {
   padding: 70px 0;
   background: var(--white);
 }
-.blog-section .section-title {
-  color: #A94D90;
-}
+
+
 .blog-title-vector-wrap,
 .blog-title-underline-wrap {
   position: relative;
@@ -2519,7 +2579,7 @@ img {
 
 .blog-title-vector {
   position: absolute;
-  bottom: 8px;
+  bottom: -6px;
   right: 0;
   left: 0;
   width: 100%;
@@ -2540,6 +2600,8 @@ img {
   object-fit: contain;
   pointer-events: none;
 }
+
+
 
 .blog-grid {
   display: grid;
@@ -2566,7 +2628,7 @@ img {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: var(--bg-light);
+  /* background: var(--bg-light); */
 }
 
 .blog-img-wrap .blog-img {
@@ -2575,21 +2637,21 @@ img {
   object-fit: cover;
   display: block;
 }
-
 .blog-date {
   position: absolute;
-  bottom: 12px;
-  right: 252px;
+  bottom: 10%;
+  left: 12px;
+  right: auto;
   width: 56px;
   height: 56px;
-  background: var(--white);
-  border: 1px solid #e0e0e0;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: none;
 }
 
 .blog-date-num {
@@ -2604,6 +2666,7 @@ img {
   color: #6a7ab8;
 }
 
+
 .blog-card h3 {
   font-size: 1rem;
   font-weight: 700;
@@ -2611,6 +2674,7 @@ img {
   color: #5370EA;
   line-height: 1.4;
   margin: 0;
+
 }
 
 .blog-card p {
@@ -2628,6 +2692,7 @@ img {
   font-weight: 700;
   text-decoration: none;
 }
+
 /* 
 .blog-link:hover {
   text-decoration: underline;
@@ -2794,6 +2859,7 @@ img {
   opacity: 0.85;
   margin: 0;
 }
+
 /* ===== Responsive ===== */
 /* نقاط التوقف: 1440 | 1400 | 1366 (iPad Pro 12.9") | 1200 | 1024 | 820 | 768 | 600 | 480 | 360
    iPad Pro 12.9": 1366×1024 (أفقي) | iPad Air 13": 1024×1366 | iPad Air 11": 820×1180 — جميع البطاقات عمودين */
@@ -3054,19 +3120,24 @@ img {
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
   }
+
   .sectors-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+
   .numbers-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .blog-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .technologies-section .tech-logos {
     gap: 28px 36px;
   }
+
   .flutter-inner {
     gap: 40px;
   }
@@ -3158,10 +3229,196 @@ img {
     padding: 48px 0 0;
   }
 
+  /* ===== نافبار تابلت 1024px — موديل القائمة (همبرجر) ===== */
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: var(--white);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .menu-toggle:hover {
+    background: var(--bg-light);
+  }
+
+  .menu-toggle .icon-close {
+    display: none;
+  }
+
+  .menu-toggle .icon-menu {
+    display: block;
+  }
+
+  .menu-toggle.is-open .icon-close {
+    display: block;
+  }
+
+  .menu-toggle.is-open .icon-menu {
+    display: none;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 20px 24px 28px;
+    margin-top: 4px;
+    background: var(--white);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 0 0 16px 16px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    pointer-events: none;
+    transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s ease;
+  }
+
+  .nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav > a {
+    padding: 16px 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease, color 0.2s ease;
+  }
+
+  .nav.open > a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav.open > a:nth-child(1) { transition-delay: 0.05s; }
+  .nav.open > a:nth-child(2) { transition-delay: 0.1s; }
+  .nav.open > a:nth-child(3) { transition-delay: 0.15s; }
+  .nav.open > a:nth-child(4) { transition-delay: 0.2s; }
+
+  .nav > a:hover {
+    background: var(--bg-light);
+    color: var(--purple);
+  }
+
+  .nav > a.active {
+    background: rgba(106, 34, 133, 0.08);
+    color: var(--purple);
+  }
+
+  .nav-actions-mobile {
+    display: flex !important;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .nav.open .nav-actions-mobile {
+    display: flex !important;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.28s;
+  }
+
+  .nav-actions-mobile .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .nav-actions-mobile .btn-primary {
+    background: var(--purple);
+    color: var(--white);
+  }
+
+  .nav-actions-mobile .btn-login {
+    background: rgba(184, 99, 157, 0.2);
+    color: var(--purple);
+    border: 1px solid var(--pink);
+  }
+
+  .nav-lang-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    background: var(--bg-light);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    transition: background 0.2s;
+  }
+
+  .nav-lang-mobile:hover {
+    background: #eee;
+    color: var(--purple);
+  }
+
+  .nav-lang-mobile img {
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ===== هيرو تابلت 1024px ===== */
+  .hero {
+    padding: 100px 0 64px;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0;
     align-items: center;
     justify-items: center;
   }
@@ -3176,10 +3433,16 @@ img {
     max-width: 100%;
   }
 
+  .hero-content .hero-title {
+    font-size: 2rem;
+    line-height: 1.35;
+  }
+
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    max-width: 100%;
   }
 
   .hero-buttons {
@@ -3502,13 +3765,14 @@ img {
   .security-col-left .security-item:nth-child(1) {
     align-self: flex-end;
   }
+
   .security-col-left .security-item:nth-child(2) {
     align-self: center;
   }
 
   .security-col-left .security-item:nth-child(3) {
     align-self: flex-start;
-    
+
   }
 
   .security-col-right .security-item:nth-child(1) {
@@ -3522,6 +3786,7 @@ img {
   [dir="rtl"] .security-col-left .security-item:nth-child(1) {
     align-self: flex-start;
   }
+
   [dir="rtl"] .security-col-left .security-item:nth-child(2) {
     align-self: center;
   }
@@ -3533,6 +3798,7 @@ img {
   [dir="rtl"] .security-col-right .security-item:nth-child(1) {
     align-self: flex-end;
   }
+
   [dir="rtl"] .security-col-right .security-item:nth-child(2) {
     align-self: center;
   }
@@ -3567,6 +3833,7 @@ img {
   .security-col-right .security-item-text {
     text-align: center;
   }
+
   .security-subtitle-underline {
     margin-left: 400px;
   }
@@ -3872,10 +4139,31 @@ img {
   }
 }
 
-/* iPad Air 11" / iPad Pro عمودي — 820px */
+/* iPad Air 11" / iPad Pro عمودي — تابلت 820px */
 @media (max-width: 820px) {
   .container {
     padding: 0 20px;
+  }
+
+  /* هيرو ونافبار — تابلت 820px */
+  .hero {
+    padding: 96px 0 56px;
+  }
+
+  .hero-content .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+  }
+
+  .header-inner {
+    padding: 14px 18px;
+  }
+
+  .logo-img {
+    height: 44px;
   }
 
   /* مسافات موحّدة لجميع الأقسام — iPad Air 11" عمودي */
@@ -4668,7 +4956,7 @@ img {
   }
 
   /* روابط التنقل — ترتيب وتباعد واضح */
-  .nav > a {
+  .nav>a {
     padding: 14px 18px;
     text-align: center;
     border-radius: 10px;
@@ -4680,22 +4968,33 @@ img {
     transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease, color 0.2s ease;
   }
 
-  .nav.open > a {
+  .nav.open>a {
     opacity: 1;
     transform: translateY(0);
   }
 
-  .nav.open > a:nth-child(1) { transition-delay: 0.05s; }
-  .nav.open > a:nth-child(2) { transition-delay: 0.1s; }
-  .nav.open > a:nth-child(3) { transition-delay: 0.15s; }
-  .nav.open > a:nth-child(4) { transition-delay: 0.2s; }
+  .nav.open>a:nth-child(1) {
+    transition-delay: 0.05s;
+  }
 
-  .nav > a:hover {
+  .nav.open>a:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+
+  .nav.open>a:nth-child(3) {
+    transition-delay: 0.15s;
+  }
+
+  .nav.open>a:nth-child(4) {
+    transition-delay: 0.2s;
+  }
+
+  .nav>a:hover {
     background: var(--bg-light);
     color: var(--purple);
   }
 
-  .nav > a.active {
+  .nav>a.active {
     background: rgba(106, 34, 133, 0.08);
     color: var(--purple);
   }
@@ -4816,13 +5115,24 @@ img {
     display: none;
   }
 
+  /* هيرو — تابلت 768px */
   .hero {
-    padding-top: 100px;
+    padding: 92px 0 52px;
   }
 
   .hero-content {
     text-align: center;
-    margin-top: -70px;
+    margin-top: 0;
+  }
+
+  .hero-content .hero-title {
+    font-size: 1.75rem;
+    line-height: 1.35;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    margin-bottom: 32px;
   }
 
   .hero-arrow {
@@ -5061,7 +5371,7 @@ img {
     padding: 20px 16px;
   }
 
-  .number-card > img {
+  .number-card>img {
     grid-row: 1 / -1;
     grid-column: 1;
     width: 52px;
@@ -5069,9 +5379,9 @@ img {
     margin-bottom: 0;
   }
 
-  .number-card > .number-value,
-  .number-card > h4,
-  .number-card > p {
+  .number-card>.number-value,
+  .number-card>h4,
+  .number-card>p {
     grid-column: 2;
   }
 
@@ -5212,13 +5522,16 @@ img {
   }
 }
 
-/* هواتف متوسطة 600px — بداية تنظيم الواجهة للهواتف */
+/* ========== هواتف — padding موحّد لجميع الشاشات ==========
+   جدول الـ padding: 600px → 40px عمودي | 480px → 32px | 430px → 28px | 360px → 24px
+   الـ container الأفقي: 600/480 → 16px | 430 → 15px | 360 → 14px
+   ========== */
 @media (max-width: 600px) {
   .container {
     padding: 0 16px;
   }
 
-  /* مسافات موحّدة لجميع الأقسام — 600px */
+  /* padding عمودي موحّد لجميع أقسام الموقع */
   .hero,
   .problem-section,
   .system-section,
@@ -5248,22 +5561,130 @@ img {
   .article-hero,
   .article-related,
   .blog-filters-section,
-  .blog-featured-section {
+  .blog-featured-section,
+  .service-detail-hero,
+  .transformation-section,
+  .lifecycle-section {
     padding: 40px 0;
+  }
+
+  .header-inner {
+    padding: 12px 16px;
+  }
+
+  .logo-img {
+    height: 42px;
+  }
+
+  .nav {
+    padding: 16px 18px 22px;
+  }
+
+  .nav > a {
+    padding: 14px 16px;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 88px 0 48px;
+  }
+
+  .hero-content .hero-title {
+    font-size: 1.65rem;
+  }
+
+  .hero-desc {
+    font-size: 0.98rem;
+    margin-bottom: 28px;
+  }
+
+  .hero-buttons .btn {
+    min-height: 46px;
+    font-size: 0.95rem;
+  }
+
+  /* ----- قسم المشكلة — هواتف 600px ----- */
+  .problem-section {
+    padding: 40px 0;
+  }
+
+  .problem-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .problem-text-col {
+    order: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .problem-cards-col {
+    order: 2;
+  }
+
+  .problem-title {
+    font-size: 1.35rem;
+    line-height: 1.45;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 8px;
+  }
+
+  .problem-desc {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    text-align: center;
+    padding: 0 4px;
+  }
+
+  .problem-solution {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .problem-solution-text {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    text-align: center;
+    padding: 0 4px;
+  }
+
+  .problem-arrow {
+    position: static;
+    margin: 16px auto 0;
+    max-width: 80px;
+    display: block;
   }
 
   .problem-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+    justify-items: stretch;
   }
 
   .problem-card {
     padding: 18px 12px;
+    gap: 10px;
+    min-height: auto;
   }
 
   .problem-card img {
     width: 44px;
     height: 44px;
+    flex-shrink: 0;
+  }
+
+  .problem-card-title {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .problem-card-sub {
+    font-size: 0.75rem;
+    line-height: 1.4;
   }
 
   .section-title {
@@ -5287,7 +5708,7 @@ img {
     padding: 16px 12px;
   }
 
-  .number-card > img {
+  .number-card>img {
     width: 48px;
     height: 48px;
   }
@@ -5352,13 +5773,13 @@ img {
   }
 }
 
-/* هواتف 480px — تنظيم كامل للشاشات الصغيرة */
+/* ========== هواتف 480px — جميع الأقسام + padding موحّد ========== */
 @media (max-width: 480px) {
   .container {
     padding: 0 16px;
   }
 
-  /* مسافات موحّدة لجميع الأقسام — هواتف 480px */
+  /* padding عمودي موحّد — هواتف 480px */
   .hero,
   .problem-section,
   .system-section,
@@ -5388,12 +5809,14 @@ img {
   .article-hero,
   .article-related,
   .blog-filters-section,
-  .blog-featured-section {
+  .blog-featured-section,
+  .service-detail-hero,
+  .transformation-section,
+  .lifecycle-section {
     padding: 32px 0;
-
   }
 
-  /* ----- تنظيم النصوص في جميع الأقسام (هواتف) ----- */
+  /* تنظيم النصوص في جميع الأقسام */
   .section-title {
     font-size: 1.28rem;
     font-weight: 800;
@@ -5415,25 +5838,63 @@ img {
     color: var(--text-muted);
   }
 
+  /* ----- قسم المشكلة — هواتف 480px ----- */
+  .problem-section {
+    padding: 32px 0;
+  }
+
+  .problem-inner {
+    gap: 24px;
+  }
+
   .problem-title {
     font-size: 1.25rem;
     line-height: 1.45;
     margin-bottom: 16px;
     text-align: center;
+    padding: 0 8px;
   }
 
   .problem-desc {
     font-size: 15px;
     line-height: 1.75;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     text-align: center;
-    
+    padding: 0 4px;
   }
 
   .problem-solution-text {
     font-size: 15px;
     line-height: 1.7;
     text-align: center;
+    padding: 0 4px;
+  }
+
+  .problem-arrow {
+    margin: 14px auto 0;
+    max-width: 72px;
+  }
+
+  .problem-grid {
+    gap: 10px;
+  }
+
+  .problem-card {
+    padding: 16px 10px;
+    gap: 8px;
+  }
+
+  .problem-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .problem-card-title {
+    font-size: 0.88rem;
+  }
+
+  .problem-card-sub {
+    font-size: 0.72rem;
   }
 
   .system-title,
@@ -5552,7 +6013,7 @@ img {
     padding: 14px 12px;
   }
 
-  .number-card > img {
+  .number-card>img {
     width: 46px;
     height: 46px;
   }
@@ -6215,13 +6676,13 @@ img {
   }
 }
 
-/* هواتف من 430px — تنظيم موحد لجميع الصفحات وجميع الأقسام */
+/* ========== هواتف 430px — جميع الأقسام + padding موحّد ========== */
 @media (max-width: 430px) {
   .container {
     padding: 0 15px;
   }
 
-  /* مسافات موحّدة لجميع الأقسام — 430px */
+  /* padding عمودي موحّد — هواتف 430px */
   .hero,
   .problem-section,
   .system-section,
@@ -6251,7 +6712,10 @@ img {
   .article-hero,
   .article-related,
   .blog-filters-section,
-  .blog-featured-section {
+  .blog-featured-section,
+  .service-detail-hero,
+  .transformation-section,
+  .lifecycle-section {
     padding: 28px 0;
   }
 
@@ -6260,6 +6724,8 @@ img {
     line-height: 1.4;
     margin-bottom: 10px;
     padding: 0 6px;
+    text-align: center;
+    align-items: center;
   }
 
   .section-desc,
@@ -6279,6 +6745,22 @@ img {
     height: 38px;
   }
 
+  .nav {
+    padding: 14px 16px 20px;
+  }
+
+  .nav > a {
+    padding: 12px 14px;
+    font-size: 0.98rem;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+  }
+
   .hero {
     padding-top: 84px;
     padding-bottom: 48px;
@@ -6296,6 +6778,12 @@ img {
     align-items: center;
     text-align: center;
     width: 100%;
+  }
+
+  .hero-vector-on-text {
+    position: absolute;
+    top: 12px;
+
   }
 
   .hero-content h1 {
@@ -6340,6 +6828,7 @@ img {
     font-size: 1.18rem;
     margin-bottom: 10px;
     padding: 0 6px;
+    margin: 0 auto;
   }
 
   .problem-desc,
@@ -6356,6 +6845,38 @@ img {
     padding: 0 4px;
   }
 
+  /* ----- قسم المشكلة — هواتف 430px ----- */
+  .problem-section {
+    padding: 28px 0;
+  }
+
+  .problem-inner {
+    gap: 22px;
+  }
+
+  .problem-title {
+    font-size: 1.18rem;
+    margin-bottom: 14px;
+    padding: 0 6px;
+  }
+
+  .problem-desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 0 4px;
+  }
+
+  .problem-solution-text {
+    font-size: 14px;
+    padding: 0 4px;
+  }
+
+  .problem-arrow {
+    display: none;
+    /* margin: 12px auto 0;
+    max-width: 64px; */
+  }
+
   .problem-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -6363,6 +6884,7 @@ img {
 
   .problem-card {
     padding: 16px 12px;
+    gap: 8px;
   }
 
   .problem-card img {
@@ -6387,7 +6909,7 @@ img {
     padding: 12px 10px;
   }
 
-  .number-card > img {
+  .number-card>img {
     width: 44px;
     height: 44px;
   }
@@ -6415,13 +6937,13 @@ img {
 
   .service-card h3 {
     font-size: 20px;
-    text-align: right; 
+    text-align: right;
   }
 
   .service-card p {
     font-size: 0.82rem;
     padding: 0 10px 14px;
-    
+
   }
 
   .why-grid {
@@ -6515,7 +7037,7 @@ img {
     font-size: 1.05rem;
   }
 
-   .security-subtitle-underline {
+  .security-subtitle-underline {
     margin: 0 auto;
     width: 30%;
     height: 30%;
@@ -6657,13 +7179,13 @@ img {
   }
 }
 
-/* هواتف صغيرة جداً 360px — تنظيم مضغوط مع الحفاظ على الوضوح */
+/* ========== هواتف 360px — جميع الأقسام + padding موحّد ========== */
 @media (max-width: 360px) {
   .container {
     padding: 0 14px;
   }
 
-  /* مسافات موحّدة لجميع الأقسام — 360px */
+  /* padding عمودي موحّد — هواتف 360px */
   .hero,
   .problem-section,
   .system-section,
@@ -6693,11 +7215,14 @@ img {
   .article-hero,
   .article-related,
   .blog-filters-section,
-  .blog-featured-section {
+  .blog-featured-section,
+  .service-detail-hero,
+  .transformation-section,
+  .lifecycle-section {
     padding: 24px 0;
   }
 
-  /* ----- تنظيم النصوص (هواتف صغيرة 360px) ----- */
+  /* تنظيم النصوص — هواتف 360px */
   .section-title {
     font-size: 1.15rem;
     line-height: 1.4;
@@ -6713,28 +7238,50 @@ img {
     padding: 0 2px;
   }
 
+  /* ----- قسم المشكلة — هواتف 360px ----- */
+  .problem-section {
+    padding: 24px 0;
+  }
+
+  .problem-inner {
+    gap: 20px;
+  }
+
   .problem-title {
     font-size: 1.1rem;
+    margin-bottom: 12px;
+    padding: 0 4px;
   }
 
   .problem-desc,
   .problem-solution-text {
     font-size: 14px;
     line-height: 1.7;
+    padding: 0 4px;
+  }
+
+  .problem-desc {
+    margin-bottom: 18px;
+  }
+
+  .problem-arrow {
+    margin: 10px auto 0;
+    max-width: 56px;
   }
 
   .problem-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 8px;
   }
 
   .problem-card {
     padding: 14px 10px;
+    gap: 6px;
   }
 
   .problem-card img {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
 
   .problem-card-title {
@@ -6755,7 +7302,7 @@ img {
     padding: 12px 10px;
   }
 
-  .number-card > img {
+  .number-card>img {
     width: 42px;
     height: 42px;
   }
@@ -6896,8 +7443,35 @@ img {
     height: 36px;
   }
 
+  .nav {
+    padding: 12px 14px 18px;
+  }
+
+  .nav > a {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .nav-actions-mobile .btn {
+    padding: 12px 18px;
+    font-size: 0.9rem;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 1.3rem;
+  }
+
   .hero-content h1 {
     font-size: 1.35rem;
+  }
+
+  .hero {
+    padding-top: 72px;
+    padding-bottom: 40px;
   }
 
   .section-title {
@@ -7039,4 +7613,3 @@ img {
     font-size: 0.85rem;
   }
 }
-
