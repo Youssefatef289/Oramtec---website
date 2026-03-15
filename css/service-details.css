@@ -848,19 +848,44 @@
     padding-top: 90px;
   }
 
-  /* على الشاشات الأصغر من 768px نعود لتكديس الصورة فوق النص */
+  /* على الشاشات الأصغر من 768px: هيرو في المنتصف وتكديس الصورة فوق النص */
+  .service-detail-hero {
+    text-align: center;
+  }
+
   .service-detail-inner {
     grid-template-columns: 1fr;
     gap: 32px;
+    justify-items: center;
+    align-items: center;
   }
 
   .service-detail-image {
     order: 0;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .service-detail-img-wrap {
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .service-detail-content {
     order: 1;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-detail-badge {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .service-detail-title {
@@ -872,7 +897,22 @@
     text-align: center;
   }
 
+  .service-detail-why {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .service-detail-why h3 {
+    text-align: center;
+  }
+
+  .service-detail-points {
+    text-align: right;
+    margin: 0 auto;
+  }
+
+  .service-detail-highlight {
     text-align: center;
   }
 
@@ -1316,6 +1356,115 @@
     width: 100%;
     max-width: 100%;
     justify-content: center;
+  }
+}
+
+/* تنظيم صفحة تفاصيل الخدمة — 430px */
+@media (max-width: 430px) {
+  .service-detail-hero,
+  .transformation-section,
+  .lifecycle-section,
+  .service-faq-section,
+  .service-cta-section,
+  .faq-section {
+    padding: 28px 0;
+  }
+
+  .service-detail-hero {
+    padding-top: 78px;
+    text-align: center;
+  }
+
+  .service-detail-inner {
+    justify-items: center;
+    align-items: center;
+  }
+
+  .service-detail-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .service-detail-title {
+    font-size: 1.28rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .service-detail-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  .service-detail-why h3,
+  .service-detail-highlight {
+    text-align: center;
+  }
+
+  .transformation-title,
+  .lifecycle-title {
+    font-size: 1.22rem;
+  }
+
+  .transformation-subtitle,
+  .lifecycle-desc {
+    font-size: 14px;
+  }
+
+  .transformation-half {
+    padding: 18px 14px;
+  }
+
+  .transformation-list li {
+    font-size: 0.85rem;
+  }
+
+  .lifecycle-content-wrap {
+    margin-bottom: 22px;
+  }
+
+  .lifecycle-diagram {
+    padding: 12px 8px;
+    min-height: 250px;
+  }
+
+  .lifecycle-feature {
+    padding: 16px 14px;
+  }
+
+  .lifecycle-feature-text h4 {
+    font-size: 0.92rem;
+  }
+
+  .lifecycle-feature-text p {
+    font-size: 0.78rem;
+  }
+
+  .accordion-trigger {
+    min-height: 48px;
+    padding: 13px 14px;
+    font-size: 0.88rem;
+  }
+
+  .service-cta-card,
+  .about-cta-card {
+    padding: 28px 18px;
+  }
+
+  .service-cta-card h2,
+  .about-cta-card h2 {
+    font-size: 1.18rem;
+  }
+
+  .service-cta-card p,
+  .about-cta-card p {
+    font-size: 14px;
+  }
+
+  .service-cta-card .btn,
+  .about-cta-card .btn {
+    min-height: 48px;
   }
 }
 

@@ -60,6 +60,31 @@
 @media (max-width: 768px) {
   .services-section {
     margin-top: 48px;
+    text-align: center;
+  }
+
+  .services-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .span-odoo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-section .section-title,
+  .services-title {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .services-section .section-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -103,6 +128,58 @@
     min-height: 46px;
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* تنظيم صفحة خدماتنا — 430px (القسم الأول في المنتصف) */
+@media (max-width: 430px) {
+  .services-section {
+    margin-top: 65px;
+    padding: 26px 0;
+    text-align: center;
+  }
+
+  .services-section .container {
+    align-items: center;
+  }
+
+  .span-odoo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-section .section-title,
+  .services-title {
+    text-align: center;
+  }
+
+  .services-section .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .services-section .section-desc {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+  .services-grid {
+    gap: 14px;
+  }
+  .service-card {
+    padding: 20px 16px;
+  }
+  .service-card h3 {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+  .service-card p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: right;
+  }
+  .service-card .btn {
+    min-height: 44px;
   }
 }
 

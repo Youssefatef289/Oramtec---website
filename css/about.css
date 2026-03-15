@@ -572,12 +572,23 @@ background-color: white;
     grid-template-columns: 1fr;
     gap: 32px;
     text-align: center;
+    justify-items: center;
+    align-items: center;
   }
   .about-hero-image {
     order: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   .about-hero-content {
     order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
   .about-image-frame {
     max-width: 320px;
@@ -588,16 +599,23 @@ background-color: white;
     font-size: 1.4rem;
     margin-bottom: 16px;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
   .about-hero-desc {
     font-size: 16px;
     margin-bottom: 24px;
     text-align: center;
     padding: 0 8px;
+    width: 100%;
+    max-width: 100%;
   }
   .about-hero-buttons {
     justify-content: center;
+    align-items: center;
     gap: 12px;
+    width: 100%;
+    max-width: 100%;
   }
   .about-hero-buttons .btn {
     min-height: 48px;
@@ -751,38 +769,65 @@ background-color: white;
 }
 
 @media (max-width: 480px) {
-  /* الهيرو */
+  /* الهيرو — في المنتصف على الهاتف */
   .about-hero {
     padding: 88px 0 40px;
+    text-align: center;
   }
   .about-hero-title {
     font-size: 1.5rem;
     margin-bottom: 24px;
     padding: 0 8px;
+    text-align: center;
   }
   .about-hero-inner {
     gap: 24px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+  .about-hero-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
   .about-image-frame {
     max-width: 280px;
+    margin: 0 auto;
   }
   .about-hero-heading {
     font-size: 1.25rem;
     margin-bottom: 12px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
   .about-hero-desc {
     font-size: 15px;
     margin-bottom: 20px;
     padding: 0 4px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
   .about-hero-buttons {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 10px;
+    width: 100%;
+    max-width: 100%;
   }
   .about-hero-buttons .btn {
     width: 100%;
-    max-width: 100%;
+    max-width: 280px;
     justify-content: center;
     min-height: 48px;
   }
@@ -920,6 +965,152 @@ background-color: white;
   .value-item h4,
   .value-item p {
     text-align: center;
+  }
+}
+
+/* تنظيم صفحة من نحن — 430px (الهيرو في المنتصف) */
+@media (max-width: 430px) {
+  .about-hero {
+    padding: 82px 0 36px;
+    text-align: center;
+  }
+  .about-hero-title {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+    padding: 0 6px;
+    text-align: center;
+  }
+  .about-hero-inner {
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+  .about-hero-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-image-frame {
+    max-width: 270px;
+    margin: 0 auto;
+  }
+  .about-hero-heading {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-hero-desc {
+    font-size: 14px;
+    padding: 0 4px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-hero-buttons .btn {
+    min-height: 46px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+  }
+  .strategic-section,
+  .vision-mission-section,
+  .values-section,
+  .features-partner-section,
+  .about-numbers-section {
+    padding: 28px 0;
+  }
+  .strategic-title {
+    font-size: 1.18rem;
+  }
+  .strategic-desc {
+    font-size: 14px;
+  }
+  .vision-card,
+  .mission-card {
+    padding: 20px 16px;
+  }
+  .vision-card h3,
+  .mission-card h3 {
+    font-size: 1.05rem;
+  }
+  .vision-card p,
+  .mission-card p {
+    font-size: 13px;
+  }
+  .values-grid {
+    gap: 12px;
+  }
+  .value-item {
+    padding: 14px 12px;
+  }
+  .value-item h4 {
+    font-size: 0.9rem;
+  }
+  .value-item p {
+    font-size: 0.78rem;
+  }
+  .odoo-partner-card {
+    padding: 24px 18px;
+  }
+  .odoo-partner-logo {
+    width: 100px;
+  }
+  .feature-card {
+    padding: 16px 14px;
+  }
+  .feature-card-header h4 {
+    font-size: 0.95rem;
+  }
+  .feature-card p {
+    font-size: 13px;
+  }
+  .about-number-card {
+    padding: 18px 12px;
+  }
+  .about-number-value {
+    font-size: 1.55rem;
+  }
+  .about-number-card h4 {
+    font-size: 0.88rem;
+  }
+  .about-number-card p {
+    font-size: 0.78rem;
+  }
+  .about-cta-section {
+    padding: 28px 0;
+  }
+  .about-cta-card {
+    padding: 28px 18px;
+  }
+  .about-cta-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+  .about-cta-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .about-cta-card .btn {
+    font-size: 0.9rem;
+    padding: 12px 18px;
   }
 }
 

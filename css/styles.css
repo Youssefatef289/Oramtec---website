@@ -3162,20 +3162,31 @@ img {
     grid-template-columns: 1fr;
     text-align: center;
     margin-top: 100px;
+    align-items: center;
+    justify-items: center;
   }
 
   .hero-content {
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-desc {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
 
   .hero-buttons {
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-arrow {
@@ -3189,6 +3200,13 @@ img {
 
   .hero-visual {
     order: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-visual .hero-main-img {
+    margin: 0 auto;
   }
 
   .problem-inner {
@@ -4804,10 +4822,12 @@ img {
 
   .hero-content {
     text-align: center;
+    margin-top: -70px;
   }
 
   .hero-arrow {
     margin: 0 auto;
+    margin-top: 20px;
   }
 
   .section-title {
@@ -5370,6 +5390,7 @@ img {
   .blog-filters-section,
   .blog-featured-section {
     padding: 32px 0;
+
   }
 
   /* ----- تنظيم النصوص في جميع الأقسام (هواتف) ----- */
@@ -5811,27 +5832,45 @@ img {
 
   .hero-inner {
     gap: 24px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
   }
 
   .hero-content h1 {
     font-size: 1.5rem;
     line-height: 1.3;
+    text-align: center;
   }
 
   .hero-desc {
     font-size: 0.9rem;
     line-height: 1.6;
+    text-align: center;
   }
 
   .hero-buttons {
     flex-direction: column;
     width: 100%;
     gap: 12px;
+    align-items: center;
   }
 
   .hero-buttons .btn {
     width: 100%;
     max-width: 280px;
+    justify-content: center;
+  }
+
+  .hero-visual {
+    display: flex;
     justify-content: center;
   }
 
@@ -6173,6 +6212,448 @@ img {
 
   .journey-wave-arrows img {
     width: 36px;
+  }
+}
+
+/* هواتف من 430px — تنظيم موحد لجميع الصفحات وجميع الأقسام */
+@media (max-width: 430px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  /* مسافات موحّدة لجميع الأقسام — 430px */
+  .hero,
+  .problem-section,
+  .system-section,
+  .why-section,
+  .services-section,
+  .journey-section,
+  .sectors-section,
+  .technologies-section,
+  .security-section,
+  .odoo-partner-section,
+  .flutter-section,
+  .numbers-section,
+  .partners-section,
+  .faq-section,
+  .blog-section,
+  .about-hero,
+  .strategic-section,
+  .vision-mission-section,
+  .values-section,
+  .features-partner-section,
+  .about-numbers-section,
+  .about-cta-section,
+  .transformation-section,
+  .lifecycle-section,
+  .contact-hero,
+  .contact-cards,
+  .article-hero,
+  .article-related,
+  .blog-filters-section,
+  .blog-featured-section {
+    padding: 28px 0;
+  }
+
+  .section-title {
+    font-size: 1.22rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    padding: 0 6px;
+  }
+
+  .section-desc,
+  .section-subtitle {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    padding: 0 4px;
+  }
+
+  .header-inner {
+    padding: 11px 12px;
+    gap: 14px;
+  }
+
+  .logo-img {
+    height: 38px;
+  }
+
+  .hero {
+    padding-top: 84px;
+    padding-bottom: 48px;
+    text-align: center;
+  }
+
+  .hero-inner {
+    align-items: center;
+    justify-items: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 1.4rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    min-height: 46px;
+    font-size: 0.9rem;
+    max-width: 260px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .problem-title,
+  .system-title,
+  .why-title,
+  .security-title,
+  .odoo-title,
+  .flutter-title,
+  .sectors-title,
+  .journey-title,
+  .technologies-title {
+    font-size: 1.18rem;
+    margin-bottom: 10px;
+    padding: 0 6px;
+  }
+
+  .problem-desc,
+  .system-desc,
+  .why-desc,
+  .security-desc,
+  .odoo-desc,
+  .flutter-desc,
+  .sectors-desc,
+  .technologies-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+    padding: 0 4px;
+  }
+
+  .problem-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .problem-card {
+    padding: 16px 12px;
+  }
+
+  .problem-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .problem-card-title {
+    font-size: 0.88rem;
+  }
+
+  .problem-card-sub {
+    font-size: 0.72rem;
+  }
+
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .number-card {
+    padding: 12px 10px;
+  }
+
+  .number-card > img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .number-value {
+    font-size: 1.35rem;
+  }
+
+  .number-card h4 {
+    font-size: 0.88rem;
+  }
+
+  .number-card p {
+    font-size: 0.72rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-card {
+    padding: 18px 14px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+    text-align: right; 
+  }
+
+  .service-card p {
+    font-size: 0.82rem;
+    padding: 0 10px 14px;
+    
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .why-img {
+    height: 190px;
+    min-height: 190px;
+  }
+
+  .why-card h3 {
+    font-size: 0.98rem;
+  }
+
+  .why-card p {
+    font-size: 0.82rem;
+    padding: 0 10px 14px;
+  }
+
+  .sectors-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .sector-card h3 {
+    font-size: 0.98rem;
+  }
+
+  .sector-card p {
+    font-size: 0.82rem;
+  }
+
+  .journey-title {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    padding: 0 4px;
+  }
+
+  .journey-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 0 4px;
+  }
+
+  .journey-steps-wrap {
+    padding: 10px 0;
+    margin-bottom: 14px;
+  }
+
+  .journey-bar-text {
+    font-size: 0.72rem;
+    max-width: 34%;
+  }
+
+  .journey-bar-text img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .journey-note {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    padding: 0 4px;
+  }
+
+  .journey-step-circle {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .technologies-section .tech-name {
+    font-size: 0.82rem;
+  }
+
+  .technologies-section .tech-icon {
+    height: 30px;
+  }
+
+  .shield-img {
+    width: 110px;
+    margin-top: 0;
+  }
+
+  .security-subtitle {
+    font-size: 1.05rem;
+  }
+
+   .security-subtitle-underline {
+    margin: 0 auto;
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  /* قسم الأمان — من 430px: درع فوق ثم العناصر 2 بجانب بعض (عمودين) */
+  .security-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 12px;
+    align-items: start;
+  }
+
+  .security-center {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    margin-bottom: 4px;
+    order: 0;
+  }
+
+  .security-col-left {
+    order: 1;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .security-col-right {
+    order: 2;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .security-item {
+    max-width: 100%;
+  }
+
+  .security-item-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .security-item-en {
+    font-size: 0.85rem;
+  }
+
+  .security-item p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .odoo-logo {
+    max-width: 260px;
+  }
+
+  .odoo-benefit h4 {
+    font-size: 0.98rem;
+  }
+
+  .odoo-benefit p {
+    font-size: 0.85rem;
+  }
+
+  .flutter-buttons .btn {
+    min-height: 46px;
+    font-size: 0.9rem;
+  }
+
+  .partner-logo {
+    width: 82px;
+    height: 82px;
+    padding: 12px;
+  }
+
+  .partner-logo .partner-logo-img {
+    max-width: 58px;
+    max-height: 58px;
+  }
+
+  .accordion-trigger {
+    min-height: 46px;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+
+  .accordion-content p {
+    font-size: 14px;
+  }
+
+  .blog-card h3 {
+    font-size: 0.92rem;
+  }
+
+  .blog-card p {
+    font-size: 0.82rem;
+  }
+
+  .blog-date {
+    width: 46px;
+    height: 46px;
+  }
+
+  .blog-date-num {
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 24px 0 0;
+  }
+
+  .footer-inner {
+    gap: 24px;
+    padding-bottom: 28px;
+  }
+
+  .footer-brand p,
+  .footer-desc {
+    font-size: 13px;
+  }
+
+  .footer-col h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-col a,
+  .footer-col p {
+    font-size: 13px;
+  }
+
+  .footer-copy p {
+    font-size: 0.78rem;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 11px 18px;
+    font-size: 0.9rem;
   }
 }
 
