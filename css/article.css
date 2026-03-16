@@ -47,7 +47,7 @@
 /* Article Hero - مطابق للصورة: تدرج خفيف، شارة وردية، عنوان واضح، صورة بارزة */
 .article-hero {
   padding: 32px 0 56px;
-  background: linear-gradient(180deg, #ffffff 0%, #faf9fc 35%, #f5f2f9 70%, #f0edf6 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #A94D9020 35%, #5370EA20 70%, #f8f6fc 100%);
   text-align: center;
 }
 

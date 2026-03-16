@@ -301,8 +301,7 @@ img {
 
 /* ===== Hero ===== */
 .hero {
-  background: linear-gradient(135deg, rgba(248, 248, 252, 0.98) 0%,
-      var(--white) 30%, rgba(231, 133, 251, 0.3) 100%);
+  background: linear-gradient(135deg, #f8f8fc 0%, #ffffff 25%, #A94D9020 50%, #5370EA20 75%, #f8f6fc 100%);
   padding: 120px 0 80px;
 }
 

@@ -5,7 +5,7 @@
 /* Service Detail Hero */
 .service-detail-hero {
   padding: 140px 0 80px;
-  background: linear-gradient(135deg, #f8f6fc 0%, #fff 100%);
+  background: linear-gradient(135deg, #f8f6fc 0%, #A94D9020 40%, #5370EA20 70%, #fff 100%);
 }
 
 .service-detail-inner {
