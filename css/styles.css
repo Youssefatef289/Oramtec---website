@@ -559,7 +559,7 @@ img {
 
 }
 
-.problem-solution-bold {
+.problem-solution{
   color: #5370EA;
   font-weight: 500;
   font-size: 20px;
@@ -568,6 +568,7 @@ img {
 .problem-oramtec-wrap {
   position: relative;
   display: inline;
+  font-weight: 700;
 }
 
 .problem-sparkle {
