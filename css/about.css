@@ -8,8 +8,8 @@
 
 .about-hero-title {
   text-align: center;
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 48px;
 }
@@ -105,7 +105,7 @@
 .about-hero-buttons .btn-primary:hover {
   background: white;
   color:#A94D90;
-  border: 1px solid #A94D90;
+  border: 2px solid #A94D90;
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 1rem;
@@ -113,7 +113,7 @@
 }
 
 .about-hero-buttons .btn-outline {
-  background: white;
+  background: none;
   color:#5370EA;
   border: 1px solid #5370EA;
   border-radius: 10px;
@@ -173,11 +173,12 @@ background-color: white;
 }
 
 .strategic-desc {
-  font-size: 1rem;
+  font-size: 18px;
   color: var(--text-muted);
   line-height: 1.8;
   margin-bottom: 16px;
-  max-width: 100%;
+  width: 500px;
+  font-weight: 400;
 }
 
 .strategic-points {
@@ -839,6 +840,42 @@ background-color: white;
   .about-numbers-section {
     padding: 40px 0;
   }
+  /* الشريك الاستراتيجي — تنظيم للهواتف ووسطية المحتوى */
+  .strategic-inner {
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .strategic-image {
+    order: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .strategic-image img {
+    width: 100%;
+    max-width: 280px;
+    object-fit: contain;
+  }
+
+  .strategic-content {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .strategic-points {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: right; /* RTL */
+  }
   .strategic-title {
     font-size: 1.25rem;
   }
@@ -1037,11 +1074,46 @@ background-color: white;
   .about-numbers-section {
     padding: 28px 0;
   }
+
+  /* الشريك الاستراتيجي — 430px وسطية أدق */
+
+.values-title-points{
+  right: 90px;
+}
+
+
+  .strategic-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .strategic-content {
+    padding: 0 6px;
+  }
+
+  .strategic-image img {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .strategic-points {
+    max-width: 280px;
+    padding: 0 2px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
   .strategic-title {
     font-size: 1.18rem;
   }
   .strategic-desc {
     font-size: 14px;
+    width: 400px;
+    margin: 0 auto;
   }
   .vision-card,
   .mission-card {
